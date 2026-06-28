@@ -1,4 +1,4 @@
-# What
+# About
 A Pokemon Go CLI tool used to automatically add new game events on a Google Calendar anyone can subscribe to
 
 # How
@@ -14,12 +14,12 @@ graph TD
     
     %% Processing Layer
     GoQuery -->|2. Traverses DOM| Extract[Extract: Title, Date, Time]
-    Extract -->|3. Compares State| Cache{Local Cache File?}
+    Extract -->|3. Compares State| Cache{Local Cache File}
     
     %% Output Layer
     Cache -->|New Event| GCal[Google Calendar API]
     Cache -->|Duplicate| Skip[Skip Event]
-    GCal -->|4. POST Request| Calendar[Your Google Calendar]
+    GCal -->|4. POST Request| Calendar[Pogo Event Calendar]
     
     %% Subtle/Professional Styling
     classDef default fill:#f4f5f6,stroke:#c5c7c9,stroke-width:1px,color:#1e293b;
@@ -37,4 +37,4 @@ graph TD
 I wanted to learn Go in a fun way and really didn't wanna go through Tour of Go cuz it looked REALLY long and boring, so here I am. I also really love Pokemon Go so this seem liked a perfect way to learn the language!
 
 # Future Additions
-- Online dashboard to query events and see what pokemon they have, what region they're from, etc.
+- Web-based dashboard to query all logged events to view featured pokemon, what region they're from, etc. for collection/research tasks
