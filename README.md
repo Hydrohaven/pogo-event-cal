@@ -9,7 +9,7 @@ graph TD
 
     %% Ingestion Layer
     App -->|1. HTTP GET| NetHTTP[net/http Package]
-    NetHTTP -->|Fetches HTML| LeekDuck[LeekDuck.com]
+    NetHTTP -->|Fetches HTML| LeekDuck[leekduck.com]
     LeekDuck -->|Returns HTML Data| GoQuery[goquery Parser]
     
     %% Processing Layer
