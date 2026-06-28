@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 )
 
 func main() {
-	event := CalendarEvent{
-		title:     "Sample Event",
-		eventType: RaidBattle,
-	}
+	// Fetch HTML Content
+	resp, _ := http.Get("https://leekduck.com/events/")
+	defer resp.Body.Close()
 
-	fmt.Print(event)
+	fmt.Print(resp)
 }
