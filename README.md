@@ -9,22 +9,27 @@ graph TD
 
     %% Ingestion Layer
     App -->|1. HTTP GET| NetHTTP[net/http Package]
-    NetHTTP -->|Fetches HTML| LeekDuck[leekduck.com]
+    NetHTTP -->|Fetches HTML| LeekDuck[LeekDuck.com]
     LeekDuck -->|Returns HTML Data| GoQuery[goquery Parser]
     
     %% Processing Layer
     GoQuery -->|2. Traverses DOM| Extract[Extract: Title, Date, Time]
-    Extract -->|3. Compares State| Cache{Local Cache File}
+    Extract -->|3. Compares State| Cache{Local Cache File?}
     
     %% Output Layer
     Cache -->|New Event| GCal[Google Calendar API]
     Cache -->|Duplicate| Skip[Skip Event]
-    GCal -->|4. POST Request| Calendar[Pokemon Go Event Calendar]
+    GCal -->|4. POST Request| Calendar[Your Google Calendar]
     
-    %% Styling
-    style Cron fill:#f9f,stroke:#333,stroke-width:2px
-    style App fill:#bbf,stroke:#333,stroke-width:2px
-    style Cache fill:#ffb,stroke:#333,stroke-width:2px
+    %% Subtle/Professional Styling
+    classDef default fill:#f4f5f6,stroke:#c5c7c9,stroke-width:1px,color:#1e293b;
+    classDef trigger fill:#e0f2fe,stroke:#38bdf8,stroke-width:1px,color:#0369a1;
+    classDef core fill:#f0fdf4,stroke:#4ade80,stroke-width:1px,color:#14532d;
+    classDef logic fill:#fff7ed,stroke:#fb923c,stroke-width:1px,color:#7c2d12;
+    
+    class Cron trigger;
+    class App core;
+    class Cache logic;
 ```
 
 
