@@ -19,7 +19,7 @@ graph TD
     %% Output Layer
     Cache -->|New Event| GCal[Google Calendar API]
     Cache -->|Duplicate| Skip[Skip Event]
-    GCal -->|4. POST Request| Calendar[Pogo Event Calendar]
+    GCal -->|4. POST Request| Calendar[Pokemon Go Event Calendar]
     
     %% Subtle/Professional Styling
     classDef default fill:#f4f5f6,stroke:#c5c7c9,stroke-width:1px,color:#1e293b;

@@ -12,11 +12,12 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-var lgnds = make(map[string]bool)
+var legendaries = make(map[string]bool)
+var eventCache = make(map[string]CalendarEvent)
 
 func main() {
-	// ==== PRE-STUFF ==== //
-	// <1> Setup Legendary/Mythical Json
+	//  ==== <PRE-STUFF> ====
+	// Setup Legendary/Mythical Json
 	data, err := os.ReadFile("legendaries.json")
 	if err != nil {
 		log.Fatal(err)
@@ -29,10 +30,16 @@ func main() {
 	}
 
 	for _, name := range list {
-		lgnds[name] = true
+		legendaries[name] = true
 	}
 
-	// <2> Fetching Initial Event Links
+	// Load event cache
+	if data, err = os.ReadFile("cache.json"); err == nil {
+		_ = json.Unmarshal(data, &eventCache)
+	}
+
+	// ==== <1> HTTP Get ====
+	// Fetching Initial Event Links
 	// Fetch Events home page
 	baseURL := "https://leekduck.com"
 	res, err := http.Get(baseURL + "/events/")
@@ -41,7 +48,8 @@ func main() {
 	}
 	defer res.Body.Close()
 
-	// Load HTMl document
+	// ==== <2> Traverse DOM ====
+	// Load HTMl document with Goquery
 	doc, err := goquery.NewDocumentFromReader(res.Body)
 	if err != nil {
 		log.Fatal(err)
@@ -50,18 +58,28 @@ func main() {
 	// Fetch event link and dates
 	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
-		link, _ := s.Find("a").Attr("href")
+		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
 		endDate, _ := s.Attr("data-event-end-date")
-		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+link)
+		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+slug)
 
-		parseEventData(baseURL+link, startDate, endDate)
+		// ==== <3> Compare Curr to Cache ====
+		// Skip if event is already cached
+		// TBD logic
+
+		parseEventData(baseURL, slug, startDate, endDate)
 	})
+
+	// ==== <4> GCal POST Request ====
+
+	// ==== <5> Encode new data to cache ====
+	cacheData, _ := json.MarshalIndent(eventCache, "", " ")
+	_ = os.WriteFile("cache.json", cacheData, 0644) // 0644 gives rw perms
 }
 
-func parseEventData(url string, startDate string, endDate string) {
+func parseEventData(baseURL string, slug string, startDate string, endDate string) {
 	// Fetch event data
-	res, err := http.Get(url)
+	res, err := http.Get(baseURL + slug)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -87,13 +105,14 @@ func parseEventData(url string, startDate string, endDate string) {
 			event.endDate = t
 		}
 		event.eventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
-		event.link = url
+		event.link = baseURL + slug
 
 		parsePokemonData(s, &event)
 	})
 
+	eventCache[slug] = event
 	fmt.Println(event)
-	fmt.Println("\n")
+	fmt.Print("\n\n")
 }
 
 func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
@@ -120,7 +139,7 @@ func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
 		}
 
 		// If legendary, add to legendList, else, pokemonList
-		if lgnds[pkmn] {
+		if legendaries[pkmn] {
 			e.legendaryList[pkmn] = struct{}{}
 		} else {
 			e.pokemonList[pkmn] = struct{}{}
