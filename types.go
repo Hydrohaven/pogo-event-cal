@@ -74,6 +74,7 @@ func (e EventType) ColorId() string {
 
 type CalendarEvent struct { // struct tags customized how they're formatted json, camelCase is proper json, they would be Pascal without the tags!
 	Title         string              `json:"title"`
+	Description   string              `json:"description"`
 	StartDate     time.Time           `json:"startDate"`
 	EndDate       time.Time           `json:"endDate"`
 	EventType     EventType           `json:"eventType"`

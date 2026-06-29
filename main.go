@@ -109,6 +109,7 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
 		event.Title = strings.TrimSpace(s.Find(".page-title").First().Text())
+		event.Description = parseDescription(s.Find(".event-description"))
 		if t, err := time.Parse(time.RFC3339, startDate); err == nil {
 			event.StartDate = t.Local()
 		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", startDate, time.Local); err == nil {
@@ -189,8 +190,9 @@ func postCalendarEvent(e CalendarEvent) {
 	calendarID := config["calendar_id"]
 
 	gcalEvent := calendar.Event{
-		Summary:  e.Title,
-		Location: e.Link,
+		Summary:     e.Title,
+		Location:    e.Link,
+		Description: e.Description,
 		Start: &calendar.EventDateTime{
 			DateTime: e.StartDate.Format(time.RFC3339)},
 		End: &calendar.EventDateTime{
@@ -204,4 +206,21 @@ func postCalendarEvent(e CalendarEvent) {
 		log.Fatalf("Unable to create event. %v\n", err)
 	}
 	fmt.Printf("Event created: %s\n", event.HtmlLink)
+}
+
+func parseDescription(desc *goquery.Selection) string {
+	var lines []string
+	desc.Children().Each(func(i int, child *goquery.Selection) {
+		if child.Is("ul") {
+			child.Find("li").Each(func(j int, li *goquery.Selection) {
+				lines = append(lines, "- "+strings.TrimSpace(li.Text()))
+			})
+		} else {
+			text := strings.TrimSpace(child.Text())
+			if text != "" {
+				lines = append(lines, text)
+			}
+		}
+	})
+	return strings.Join(lines, "\n\n")
 }
