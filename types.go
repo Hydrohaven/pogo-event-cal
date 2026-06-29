@@ -49,7 +49,7 @@ func (e EventType) String() string {
 	return names[e]
 }
 
-type CalendarEvent struct {
+type CalendarEvent struct { // struct tags customized how they're formatted json, camelCase is proper json, they would be Pascal without the tags!
 	Title         string              `json:"title"`
 	StartDate     time.Time           `json:"startDate"`
 	EndDate       time.Time           `json:"endDate"`
