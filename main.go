@@ -72,6 +72,7 @@ func main() {
 	})
 
 	// ==== <4> GCal POST Request ====
+	postCalendarEvent()
 
 	// ==== <5> Encode new data to cache ====
 	cacheData, _ := json.MarshalIndent(eventCache, "", "\t")
@@ -159,4 +160,8 @@ func ignoreGenesect(s string) bool {
 	}
 
 	return false
+}
+
+func postCalendarEvent() {
+
 }
