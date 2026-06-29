@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -10,6 +11,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"google.golang.org/api/calendar/v3"
 )
 
 var legendaries = make(map[string]bool)
@@ -17,6 +19,9 @@ var eventCache = make(map[string]CalendarEvent)
 
 func main() {
 	//  ==== <PRE-STUFF> ====
+	// Setup env variables
+	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "service-worker-auth.json")
+
 	// Setup Legendary/Mythical Json
 	data, err := os.ReadFile("legendaries.json")
 	if err != nil {
@@ -56,7 +61,7 @@ func main() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 30).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 3).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
@@ -69,10 +74,10 @@ func main() {
 		}
 
 		parseEventData(baseURL, slug, startDate, endDate)
-	})
 
-	// ==== <4> GCal POST Request ====
-	postCalendarEvent()
+		// ==== <4> GCal POST Request ====
+		postCalendarEvent(eventCache[slug])
+	})
 
 	// ==== <5> Encode new data to cache ====
 	cacheData, _ := json.MarshalIndent(eventCache, "", "\t")
@@ -162,6 +167,32 @@ func ignoreGenesect(s string) bool {
 	return false
 }
 
-func postCalendarEvent() {
+func postCalendarEvent(e CalendarEvent) {
+	ctx := context.Background() // a service that manages the lifecycle, signals, and metadata of operations around api's and goroutines
+	srv, err := calendar.NewService(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	var config map[string]string
+	if data, err := os.ReadFile("config.json"); err == nil {
+		_ = json.Unmarshal(data, &config)
+	}
+	calendarID := config["calendar_id"]
+
+	gcalEvent := calendar.Event{
+		Summary:  e.Title,
+		HtmlLink: e.Link,
+		Start: &calendar.EventDateTime{
+			DateTime: e.StartDate.Format(time.RFC3339)},
+		End: &calendar.EventDateTime{
+			DateTime: e.EndDate.Format(time.RFC3339),
+		},
+	}
+
+	event, err := srv.Events.Insert(calendarID, &gcalEvent).Do()
+	if err != nil {
+		log.Fatalf("Unable to create event. %v\n", err)
+	}
+	fmt.Printf("Event created: %s\n", event.HtmlLink)
 }

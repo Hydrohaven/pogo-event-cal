@@ -72,3 +72,7 @@ func (c CalendarEvent) String() string {
 
 	return fmt.Sprintf(msg, c.Title, c.StartDate, c.EndDate, c.EventType, c.Link, c.PokemonList, c.LegendaryList, c.MegaList)
 }
+
+type Config struct {
+	CalendarID string `json:"calendar_id"`
+}
