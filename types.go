@@ -49,6 +49,29 @@ func (e EventType) String() string {
 	return names[e]
 }
 
+func (e EventType) ColorId() string {
+	switch e {
+	case Event:
+		return "7"
+	case RaidBattle:
+		return "2"
+	case RaidDay:
+		return "10"
+	case RaidHour:
+		return "10"
+	case CommunityDay:
+		return "1"
+	case MaxMonday:
+		return "4"
+	case SpotlightHour:
+		return "1"
+	case PokemonGoFest:
+		return "9"
+	default:
+		return "6"
+	}
+}
+
 type CalendarEvent struct { // struct tags customized how they're formatted json, camelCase is proper json, they would be Pascal without the tags!
 	Title         string              `json:"title"`
 	StartDate     time.Time           `json:"startDate"`

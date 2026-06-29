@@ -61,15 +61,23 @@ func main() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 3).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 5).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
 		endDate, _ := s.Attr("data-event-end-date")
 		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+slug)
 
+		// ==== <2.5> Skip events I don't like ====
+		cleanType := strings.TrimSpace(eventType)
+		if _, ok := stringToEventType[cleanType]; !ok {
+			fmt.Printf("@ Skipped %v\n", cleanType)
+			return
+		}
+
 		// ==== <3> Compare Curr to Cache ====
 		if _, ok := eventCache[slug]; ok {
+			fmt.Printf("Skipped %v\n", slug)
 			return
 		}
 
@@ -182,12 +190,13 @@ func postCalendarEvent(e CalendarEvent) {
 
 	gcalEvent := calendar.Event{
 		Summary:  e.Title,
-		HtmlLink: e.Link,
+		Location: e.Link,
 		Start: &calendar.EventDateTime{
 			DateTime: e.StartDate.Format(time.RFC3339)},
 		End: &calendar.EventDateTime{
 			DateTime: e.EndDate.Format(time.RFC3339),
 		},
+		ColorId: e.EventType.ColorId(),
 	}
 
 	event, err := srv.Events.Insert(calendarID, &gcalEvent).Do()
