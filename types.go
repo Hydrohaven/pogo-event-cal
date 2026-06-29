@@ -8,7 +8,8 @@ import (
 type EventType int
 
 const (
-	Event EventType = iota
+	Default EventType = iota
+	Event
 	RaidBattle
 	RaidDay
 	RaidHour
@@ -19,6 +20,7 @@ const (
 )
 
 var stringToEventType = map[string]EventType{
+	"Default":        Default,
 	"Event":          Event,
 	"Raid Battles":   RaidBattle,
 	"Raid Day":       RaidDay,
@@ -31,6 +33,7 @@ var stringToEventType = map[string]EventType{
 
 func (e EventType) String() string {
 	names := [...]string{
+		"Default",
 		"Event",
 		"Raid Battles",
 		"Raid Day",

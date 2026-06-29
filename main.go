@@ -47,7 +47,7 @@ func main() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 10).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		link, _ := s.Find("a").Attr("href")
 		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+link)
@@ -73,7 +73,7 @@ func parseEventData(url string) {
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
 		event.title = strings.TrimSpace(s.Find(".page-title").First().Text())
-		event.eventType = stringToEventType[s.Find(".tag .raid-day").First().Text()]
+		event.eventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
 		event.link = url
 
 		parsePokemonData(s, &event)
@@ -96,10 +96,14 @@ func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
 
 	s.Find(".pkmn-list-item").Each(func(i int, node *goquery.Selection) {
 		pkmn := node.Text()
+		if ignoreGenesect(pkmn) {
+			return
+		}
 
 		// Add to megaList if Mega
 		if strings.HasPrefix(pkmn, "Mega") {
 			e.megaList[pkmn] = struct{}{}
+			return
 		}
 
 		// If legendary, add to legendList, else, pokemonList
@@ -109,4 +113,17 @@ func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
 			e.pokemonList[pkmn] = struct{}{}
 		}
 	})
+}
+
+// Ignores stupid genesect drives cuz i DONT like genesect
+func ignoreGenesect(s string) bool {
+	if s == "Genesect" {
+		return false
+	}
+
+	if strings.HasPrefix(s, "Genesect") {
+		return true
+	}
+
+	return false
 }
