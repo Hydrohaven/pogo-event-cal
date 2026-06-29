@@ -56,7 +56,7 @@ func main() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 30).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
@@ -64,8 +64,9 @@ func main() {
 		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+slug)
 
 		// ==== <3> Compare Curr to Cache ====
-		// Skip if event is already cached
-		// TBD logic
+		if _, ok := eventCache[slug]; ok {
+			return
+		}
 
 		parseEventData(baseURL, slug, startDate, endDate)
 	})
