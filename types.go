@@ -16,19 +16,19 @@ const (
 	CommunityDay
 	MaxMonday
 	SpotlightHour
-	Special // GO Fest, other big events like this
+	PokemonGoFest
 )
 
 var stringToEventType = map[string]EventType{
-	"Default":        Default,
-	"Event":          Event,
-	"Raid Battles":   RaidBattle,
-	"Raid Day":       RaidDay,
-	"Raid Hour":      RaidHour,
-	"Community Day":  CommunityDay,
-	"Max Mondays":    MaxMonday,
-	"Spotlight Hour": SpotlightHour,
-	"Special":        Special,
+	"Default":         Default,
+	"Event":           Event,
+	"Raid Battles":    RaidBattle,
+	"Raid Day":        RaidDay,
+	"Raid Hour":       RaidHour,
+	"Community Day":   CommunityDay,
+	"Max Mondays":     MaxMonday,
+	"Spotlight Hour":  SpotlightHour,
+	"Pokémon GO Fest": PokemonGoFest,
 }
 
 func (e EventType) String() string {
@@ -41,7 +41,7 @@ func (e EventType) String() string {
 		"Community Day",
 		"Max Mondays",
 		"Spotlight Hour",
-		"Special",
+		"PokemonGoFest",
 	}
 	if e < 0 || int(e) >= len(names) {
 		return fmt.Sprintf("EventType(%d)", e)

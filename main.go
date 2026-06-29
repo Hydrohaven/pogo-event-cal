@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -50,13 +51,15 @@ func main() {
 	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		link, _ := s.Find("a").Attr("href")
+		startDate, _ := s.Attr("data-event-start-date-check")
+		endDate, _ := s.Attr("data-event-end-date")
 		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+link)
 
-		parseEventData(baseURL + link)
+		parseEventData(baseURL+link, startDate, endDate)
 	})
 }
 
-func parseEventData(url string) {
+func parseEventData(url string, startDate string, endDate string) {
 	// Fetch event data
 	res, err := http.Get(url)
 	if err != nil {
@@ -73,6 +76,16 @@ func parseEventData(url string) {
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
 		event.title = strings.TrimSpace(s.Find(".page-title").First().Text())
+		if t, err := time.Parse(time.RFC3339, startDate); err == nil {
+			event.startDate = t.Local()
+		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", startDate, time.Local); err == nil {
+			event.startDate = t
+		}
+		if t, err := time.Parse(time.RFC3339, endDate); err == nil {
+			event.endDate = t.Local()
+		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", endDate, time.Local); err == nil {
+			event.endDate = t
+		}
 		event.eventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
 		event.link = url
 
