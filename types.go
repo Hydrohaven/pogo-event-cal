@@ -52,9 +52,9 @@ type CalendarEvent struct {
 	endDate       time.Time
 	eventType     EventType //
 	link          string
-	pokemonList   []string // Populated by all non-legendary pokemon on the page
-	legendaryList []string // Populated by all legendary/mythic pokemon on the page
-	megaList      []string // Populated by all mega pokemon on page (including legendaries)
+	pokemonList   map[string]struct{} // Populated by all non-legendary pokemon on the page
+	legendaryList map[string]struct{} // Populated by all legendary/mythic pokemon on the page
+	megaList      map[string]struct{} // Populated by all mega pokemon on page (including legendaries)
 }
 
 func (c CalendarEvent) String() string {
