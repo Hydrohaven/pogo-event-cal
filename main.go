@@ -73,7 +73,7 @@ func main() {
 	// ==== <4> GCal POST Request ====
 
 	// ==== <5> Encode new data to cache ====
-	cacheData, _ := json.MarshalIndent(eventCache, "", " ")
+	cacheData, _ := json.MarshalIndent(eventCache, "", "\t")
 	_ = os.WriteFile("cache.json", cacheData, 0644) // 0644 gives rw perms
 }
 
@@ -93,19 +93,19 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 	// Popular CalenderEvent
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
-		event.title = strings.TrimSpace(s.Find(".page-title").First().Text())
+		event.Title = strings.TrimSpace(s.Find(".page-title").First().Text())
 		if t, err := time.Parse(time.RFC3339, startDate); err == nil {
-			event.startDate = t.Local()
+			event.StartDate = t.Local()
 		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", startDate, time.Local); err == nil {
-			event.startDate = t
+			event.StartDate = t
 		}
 		if t, err := time.Parse(time.RFC3339, endDate); err == nil {
-			event.endDate = t.Local()
+			event.EndDate = t.Local()
 		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", endDate, time.Local); err == nil {
-			event.endDate = t
+			event.EndDate = t
 		}
-		event.eventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
-		event.link = baseURL + slug
+		event.EventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
+		event.Link = baseURL + slug
 
 		parsePokemonData(s, &event)
 	})
@@ -116,14 +116,14 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 }
 
 func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
-	if e.megaList == nil {
-		e.megaList = make(map[string]struct{})
+	if e.MegaList == nil {
+		e.MegaList = make(map[string]struct{})
 	}
-	if e.legendaryList == nil {
-		e.legendaryList = make(map[string]struct{})
+	if e.LegendaryList == nil {
+		e.LegendaryList = make(map[string]struct{})
 	}
-	if e.pokemonList == nil {
-		e.pokemonList = make(map[string]struct{})
+	if e.PokemonList == nil {
+		e.PokemonList = make(map[string]struct{})
 	}
 
 	s.Find(".pkmn-list-item").Each(func(i int, node *goquery.Selection) {
@@ -134,15 +134,15 @@ func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
 
 		// Add to megaList if Mega
 		if strings.HasPrefix(pkmn, "Mega") {
-			e.megaList[pkmn] = struct{}{}
+			e.MegaList[pkmn] = struct{}{}
 			return
 		}
 
 		// If legendary, add to legendList, else, pokemonList
 		if legendaries[pkmn] {
-			e.legendaryList[pkmn] = struct{}{}
+			e.LegendaryList[pkmn] = struct{}{}
 		} else {
-			e.pokemonList[pkmn] = struct{}{}
+			e.PokemonList[pkmn] = struct{}{}
 		}
 	})
 }

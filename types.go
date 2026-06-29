@@ -50,14 +50,14 @@ func (e EventType) String() string {
 }
 
 type CalendarEvent struct {
-	title         string
-	startDate     time.Time // includes date and time
-	endDate       time.Time
-	eventType     EventType //
-	link          string
-	pokemonList   map[string]struct{} // Populated by all non-legendary pokemon on the page
-	legendaryList map[string]struct{} // Populated by all legendary/mythic pokemon on the page
-	megaList      map[string]struct{} // Populated by all mega pokemon on page (including legendaries)
+	Title         string              `json:"title"`
+	StartDate     time.Time           `json:"startDate"`
+	EndDate       time.Time           `json:"endDate"`
+	EventType     EventType           `json:"eventType"`
+	Link          string              `json:"link"`
+	PokemonList   map[string]struct{} `json:"pokemonList"`
+	LegendaryList map[string]struct{} `json:"legendaryList"`
+	MegaList      map[string]struct{} `json:"megaList"`
 }
 
 func (c CalendarEvent) String() string {
@@ -70,5 +70,5 @@ func (c CalendarEvent) String() string {
 		"Legendaries\t%v\n" +
 		"Megas\t\t%v"
 
-	return fmt.Sprintf(msg, c.title, c.startDate, c.endDate, c.eventType, c.link, c.pokemonList, c.legendaryList, c.megaList)
+	return fmt.Sprintf(msg, c.Title, c.StartDate, c.EndDate, c.EventType, c.Link, c.PokemonList, c.LegendaryList, c.MegaList)
 }
