@@ -41,7 +41,7 @@ Lil todo list for me for the remaining features of the app after Day 1
 - Make mega raids dark green ("10")
 - Add pokemon to description of event (tweak with redability)
 - Consider making shadow raids weekend only and set them on repeat for 4 weeks (since thats what they are)
+- Make it query the next 2-4 weeks of events instead of a fixed amount (prolly 3 weeks to make sure things are updated properly on leekduck) 
 
 # Future Additions
-- CLI way to clear existing calendar events? Maybe i can like get all calendar events and then remove whichever i want in terminal (want)
 - Web-based dashboard to query all logged events to view featured pokemon, what region they're from, etc. for collection/research tasks
