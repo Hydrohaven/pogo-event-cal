@@ -16,12 +16,36 @@ import (
 
 var legendaries = make(map[string]bool)
 var eventCache = make(map[string]CalendarEvent)
+var ctx context.Context
+var srv *calendar.Service
+var calendarID string
+var isCalSynced bool = false
 
 func main() {
 	//  ==== <PRE-STUFF> ====
 	// Setup env variables
 	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "service-worker-auth.json")
 
+	// Start CLI
+	startCLI()
+}
+
+func syncCalendar() {
+	var err any
+	ctx := context.Background() // a service that manages the lifecycle, signals, and metadata of operations around api's and goroutines
+	srv, err = calendar.NewService(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var config map[string]string
+	if data, err := os.ReadFile("config.json"); err == nil {
+		_ = json.Unmarshal(data, &config)
+	}
+	calendarID = config["calendar_id"]
+}
+
+func startSync() {
 	// Setup Legendary/Mythical Json
 	data, err := os.ReadFile("legendaries.json")
 	if err != nil {
@@ -61,7 +85,7 @@ func main() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 5).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
@@ -84,12 +108,14 @@ func main() {
 		parseEventData(baseURL, slug, startDate, endDate)
 
 		// ==== <4> GCal POST Request ====
-		postCalendarEvent(eventCache[slug])
+		postEvent(eventCache[slug])
 	})
 
 	// ==== <5> Encode new data to cache ====
 	cacheData, _ := json.MarshalIndent(eventCache, "", "\t")
 	_ = os.WriteFile("cache.json", cacheData, 0644) // 0644 gives rw perms
+
+	startCLI()
 }
 
 func parseEventData(baseURL string, slug string, startDate string, endDate string) {
@@ -176,18 +202,11 @@ func ignoreGenesect(s string) bool {
 	return false
 }
 
-func postCalendarEvent(e CalendarEvent) {
-	ctx := context.Background() // a service that manages the lifecycle, signals, and metadata of operations around api's and goroutines
-	srv, err := calendar.NewService(ctx)
-	if err != nil {
-		log.Fatal(err)
+func postEvent(e CalendarEvent) {
+	if !isCalSynced {
+		syncCalendar()
+		isCalSynced = true
 	}
-
-	var config map[string]string
-	if data, err := os.ReadFile("config.json"); err == nil {
-		_ = json.Unmarshal(data, &config)
-	}
-	calendarID := config["calendar_id"]
 
 	gcalEvent := calendar.Event{
 		Summary:     e.Title,
@@ -223,4 +242,40 @@ func parseDescription(desc *goquery.Selection) string {
 		}
 	})
 	return strings.Join(lines, "\n\n")
+}
+
+func deleteAllEvents() {
+	if !isCalSynced {
+		syncCalendar()
+		isCalSynced = true
+	}
+
+	var check string
+	fmt.Println("<> Are you sure you want to clear the calendar? <>")
+	fmt.Println("Y/N?")
+	_, err := fmt.Scanln(&check)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	switch check {
+	case "Y", "y":
+		err := srv.Calendars.Clear(calendarID).Do()
+		if err != nil {
+			// Calendars.Clear only works on the "primary" calendar.
+			// If this is a secondary calendar, we must list and delete events one by one.
+			events, listErr := srv.Events.List(calendarID).Do()
+			if listErr != nil {
+				log.Fatalf("Unable to retrieve events: %v", listErr)
+			}
+			for _, item := range events.Items {
+				err := srv.Events.Delete(calendarID, item.Id).Do()
+				if err != nil {
+					log.Printf("Could not delete event %s: %v\n", item.Summary, err)
+				}
+			}
+		}
+		fmt.Println("<> Cleared all calendar events <>")
+	}
+	startCLI()
 }
