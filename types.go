@@ -19,6 +19,20 @@ const (
 	PokemonGoFest
 )
 
+const (
+	Lavender  = "1"  // Light Blue / Periwinkle
+	Sage      = "2"  // Light Green
+	Grape     = "3"  // Purple
+	Flamingo  = "4"  // Pink
+	Banana    = "5"  // Yellow
+	Tangerine = "6"  // Orange
+	Peacock   = "7"  // Turquoise
+	Graphite  = "8"  // Gray
+	Blueberry = "9"  // Blue
+	Basil     = "10" // Green
+	Tomato    = "11" // Red
+)
+
 var stringToEventType = map[string]EventType{
 	"Default":         Default,
 	"Event":           Event,
@@ -52,23 +66,23 @@ func (e EventType) String() string {
 func (e EventType) ColorId() string {
 	switch e {
 	case Event:
-		return "7"
+		return Peacock
 	case RaidBattle:
-		return "2"
+		return Sage
 	case RaidDay:
-		return "10"
+		return Basil
 	case RaidHour:
-		return "10"
+		return Basil
 	case CommunityDay:
-		return "1"
+		return Lavender
 	case MaxMonday:
-		return "4"
+		return Flamingo
 	case SpotlightHour:
-		return "1"
+		return Lavender
 	case PokemonGoFest:
-		return "9"
+		return Blueberry
 	default:
-		return "6"
+		return Tangerine
 	}
 }
 

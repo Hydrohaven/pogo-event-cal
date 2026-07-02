@@ -208,6 +208,13 @@ func postEvent(e CalendarEvent) {
 		isCalSynced = true
 	}
 
+	var colorId string
+	if strings.Contains(e.Title, "Mega Raids") {
+		colorId = Basil
+	} else {
+		colorId = e.EventType.ColorId()
+	}
+
 	gcalEvent := calendar.Event{
 		Summary:     e.Title,
 		Location:    e.Link,
@@ -217,7 +224,7 @@ func postEvent(e CalendarEvent) {
 		End: &calendar.EventDateTime{
 			DateTime: e.EndDate.Format(time.RFC3339),
 		},
-		ColorId: e.EventType.ColorId(),
+		ColorId: colorId,
 	}
 
 	event, err := srv.Events.Insert(calendarID, &gcalEvent).Do()

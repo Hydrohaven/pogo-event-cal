@@ -38,7 +38,6 @@ I wanted to learn Go in a fun way and really didn't wanna go through Tour of Go 
 
 # Current Additions
 Lil todo list for me for the remaining features of the app after Day 1
-- Make mega raids dark green ("10")
 - Add pokemon to description of event (tweak with redability)
 - Consider making shadow raids weekend only and set them on repeat for 4 weeks (since thats what they are)
 - Make it query the next 2-4 weeks of events instead of a fixed amount (prolly 3 weeks to make sure things are updated properly on leekduck) 
