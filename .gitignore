@@ -1,2 +1,5 @@
 service-worker-auth.json
 config.json
+
+# I'll remove this later
+cache.json 

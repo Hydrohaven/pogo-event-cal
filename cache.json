@@ -1,6 +1,6 @@
 {
 	"/events/10th-anniversary-party/": {
-		"title": "10th Anniversary Party",
+		"title": "10th Anniversary Party",
 		"description": "Celebrate a decade of Pokémon GO together during the 10th Anniversary Party!\n\nThe 10th Anniversary Party event will take place from July 4, 2026 at 10 am to July 6, 2026 at 8 pm.",
 		"startDate": "2026-07-04T10:00:00-07:00",
 		"endDate": "2026-07-06T20:00:00-07:00",
@@ -26,7 +26,7 @@
 		"megaList": {}
 	},
 	"/events/articuno-zapdos-moltres-in-5-star-raid-battles-july-2026/": {
-		"title": "Articuno, Zapdos, and Moltres in 5-star Raid Battles",
+		"title": "Articuno, Zapdos, and Moltres in 5-star Raid Battles",
 		"description": "Articuno, Zapdos, and Moltres will be in five-star raid battles from July 1, 2026 to July 5, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Articuno, Zapdos, and Moltres from 6:00 pm to 7:00 pm local time on the following date:\n\n- July 1",
 		"startDate": "2026-07-01T06:00:00-07:00",
 		"endDate": "2026-07-05T22:00:00-07:00",
@@ -40,72 +40,32 @@
 		},
 		"megaList": {}
 	},
-	"/events/celesteela-kartana-in-5-star-raid-battles-june-2026/": {
-		"title": "Celesteela and Kartana in 5-star Raid Battles",
-		"description": "Celesteela and Kartana will be in five-star raid battles from June 24, 2026 to June 30, 2026.\n\n- Celesteela will appear in the Southern Hemisphere.\n\n- Kartana will appear in the Northern Hemisphere.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring these Pokemon from 6:00 pm to 7:00 pm local time on the following date:\n\n- June 24\n\nThese Pokemon will remain in their respective regions.",
-		"startDate": "2026-06-24T06:00:00-07:00",
-		"endDate": "2026-06-30T22:00:00-07:00",
-		"eventType": 2,
-		"link": "https://leekduck.com/events/celesteela-kartana-in-5-star-raid-battles-june-2026/",
-		"pokemonList": {},
-		"legendaryList": {
-			"Celesteela": {},
-			"Kartana": {}
-		},
-		"megaList": {}
-	},
-	"/events/flying-taxi-2026/": {
-		"title": "Flying Taxi",
-		"description": "Take flight as Squawkabilly makes its Pokémon GO debut!\n\nThe Flying Taxi event will take place from June 23, 2026 at 10 am to June 29, 2026 at 8 pm.",
-		"startDate": "2026-06-23T10:00:00-07:00",
-		"endDate": "2026-06-29T20:00:00-07:00",
+	"/events/happy-birthday-professor-willow-2026/": {
+		"title": "Happy Birthday, Professor Willow!",
+		"description": "Wish Professor Willow a very happy birthday with Professor Willow’s assistant Pikachu!\n\nThe Happy Birthday, Professor Willow! event will take place on July 21, 2026 from 10 am to 8 pm.",
+		"startDate": "2026-07-21T10:00:00-07:00",
+		"endDate": "2026-07-21T20:00:00-07:00",
 		"eventType": 1,
-		"link": "https://leekduck.com/events/flying-taxi-2026/",
+		"link": "https://leekduck.com/events/happy-birthday-professor-willow-2026/",
 		"pokemonList": {
-			"Bombirdier": {},
-			"Corvisquire": {},
-			"Hisuian Braviary": {},
-			"Hoothoot": {},
-			"Pidgey": {},
-			"Pidove": {},
-			"Pikipek": {},
-			"Rookidee": {},
-			"Spearow": {},
-			"Squawkabilly (Blue)": {},
-			"Squawkabilly (Green)": {},
-			"Squawkabilly (White)": {},
-			"Squawkabilly (Yellow)": {},
-			"Starly": {},
-			"Swablu": {},
-			"Vullaby": {},
-			"Wattrel": {}
+			"Professor Willow's assistant Pikachu": {}
 		},
 		"legendaryList": {},
 		"megaList": {}
 	},
-	"/events/flying-taxi-taken-over-2026/": {
-		"title": "Flying Taxi: Taken Over",
-		"description": "Rescue Shadow Reshiram and more during Flying Taxi: Taken Over!\n\nThe Flying Taxi: Taken Over event will take place from June 25, 2026 at 12 am to June 29, 2026 at 8 pm.",
-		"startDate": "2026-06-25T00:00:00-07:00",
-		"endDate": "2026-06-29T20:00:00-07:00",
+	"/events/hatch-day-august-2026/": {
+		"title": "Hatch Day",
+		"description": "The Hatch Day event will take place on August 8, 2026 from 11 am to 5 pm. Stay tuned for more details.",
+		"startDate": "2026-08-08T11:00:00-07:00",
+		"endDate": "2026-08-08T17:00:00-07:00",
 		"eventType": 1,
-		"link": "https://leekduck.com/events/flying-taxi-taken-over-2026/",
-		"pokemonList": {
-			"Amaura": {},
-			"Axew": {},
-			"Hoothoot": {},
-			"Noibat": {},
-			"Rookidee": {},
-			"Seel": {},
-			"Tyrunt": {}
-		},
-		"legendaryList": {
-			"Reshiram": {}
-		},
+		"link": "https://leekduck.com/events/hatch-day-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {},
 		"megaList": {}
 	},
 	"/events/july-communityday2026/": {
-		"title": "Sobble Community Day",
+		"title": "Sobble Community Day",
 		"description": "Sobble, the Water Lizard Pokémon, will be featured during July Community Day!",
 		"startDate": "2026-07-04T14:00:00-07:00",
 		"endDate": "2026-07-04T17:00:00-07:00",
@@ -119,21 +79,34 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
-	"/events/max-mondays-2026-06-29/": {
-		"title": "Dynamax Pidove during Max Monday",
-		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn June 29, 2026, the featured Dynamax Pokemon is Pidove.\n\n- Pidove",
-		"startDate": "2026-06-29T06:00:00-07:00",
-		"endDate": "2026-06-29T21:00:00-07:00",
-		"eventType": 6,
-		"link": "https://leekduck.com/events/max-mondays-2026-06-29/",
-		"pokemonList": {
-			"Pidove": {}
+	"/events/kyogre-in-5-star-raid-battles-july-2026/": {
+		"title": "Kyogre in 5-star Raid Battles",
+		"description": "Kyogre will be in five-star raid battles from July 15, 2026 to July 21, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Kyogre from 6:00 pm to 7:00 pm local time on the following date:\n\n- July 15",
+		"startDate": "2026-07-15T06:00:00-07:00",
+		"endDate": "2026-07-21T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/kyogre-in-5-star-raid-battles-july-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Kyogre": {}
 		},
-		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/kyurem-in-5-star-raid-battles-july-2026/": {
+		"title": "Kyurem in 5-star Raid Battles",
+		"description": "Kyurem will be in five-star raid battles from July 29, 2026 to August 4, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Kyurem from 6:00 pm to 7:00 pm local time on the following date:\n\n- July 29",
+		"startDate": "2026-07-29T06:00:00-07:00",
+		"endDate": "2026-08-04T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/kyurem-in-5-star-raid-battles-july-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Kyurem": {}
+		},
 		"megaList": {}
 	},
 	"/events/max-mondays-2026-07-06/": {
-		"title": "Dynamax Chansey during Max Monday",
+		"title": "Dynamax Chansey during Max Monday",
 		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn July 6, 2026, the featured Dynamax Pokemon is Chansey.\n\n- Chansey",
 		"startDate": "2026-07-06T06:00:00-07:00",
 		"endDate": "2026-07-06T21:00:00-07:00",
@@ -146,7 +119,7 @@
 		"megaList": {}
 	},
 	"/events/max-mondays-2026-07-13/": {
-		"title": "Dynamax Deino during Max Monday",
+		"title": "Dynamax Deino during Max Monday",
 		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn July 13, 2026, the featured Dynamax Pokemon is Deino.\n\n- Deino",
 		"startDate": "2026-07-13T06:00:00-07:00",
 		"endDate": "2026-07-13T21:00:00-07:00",
@@ -158,8 +131,64 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/max-mondays-2026-07-20/": {
+		"title": "Dynamax Trubbish during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn July 20, 2026, the featured Dynamax Pokemon is Trubbish.\n\n- Trubbish",
+		"startDate": "2026-07-20T06:00:00-07:00",
+		"endDate": "2026-07-20T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-07-20/",
+		"pokemonList": {
+			"Trubbish": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-07-27/": {
+		"title": "Dynamax Feebas during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn July 27, 2026, the featured Dynamax Pokemon is Feebas.\n\n- Feebas",
+		"startDate": "2026-07-27T06:00:00-07:00",
+		"endDate": "2026-07-27T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-07-27/",
+		"pokemonList": {
+			"Feebas": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/mega-aggron-in-mega-raids-july-2026/": {
+		"title": "Mega Aggron in Mega Raids",
+		"description": "Mega Aggron will be in Mega Raids from July 29, 2026 at 6 am to August 4, 2026 at 10 pm local time.",
+		"startDate": "2026-07-29T06:00:00-07:00",
+		"endDate": "2026-08-04T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-aggron-in-mega-raids-july-2026/",
+		"pokemonList": {
+			"Aggron": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Aggron": {}
+		}
+	},
+	"/events/mega-lucario-in-mega-raids-july-13-2026/": {
+		"title": "Mega Lucario in Mega Raids - July 13",
+		"description": "Mega Lucario returns to Mega Raids from July 13, 2026 at 6 am to July 14, 2026 at 10 pm local time.",
+		"startDate": "2026-07-13T06:00:00-07:00",
+		"endDate": "2026-07-14T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-lucario-in-mega-raids-july-13-2026/",
+		"pokemonList": {
+			"Lucario": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Lucario": {}
+		}
+	},
 	"/events/mega-lucario-in-mega-raids-july-2026/": {
-		"title": "Mega Lucario in Mega Raids",
+		"title": "Mega Lucario in Mega Raids",
 		"description": "Mega Lucario will be in Mega Raids from July 1, 2026 at 6 am to July 5, 2026 at 10 pm local time.",
 		"startDate": "2026-07-01T06:00:00-07:00",
 		"endDate": "2026-07-05T22:00:00-07:00",
@@ -173,23 +202,51 @@
 			"Mega Lucario": {}
 		}
 	},
-	"/events/mega-pidgeot-in-mega-raids-june-2026/": {
-		"title": "Mega Pidgeot in Mega Raids",
-		"description": "Mega Pidgeot will be in Mega Raids from June 24, 2026 at 6 am to July 1, 2026 at 6 am local time.",
-		"startDate": "2026-06-24T06:00:00-07:00",
-		"endDate": "2026-07-01T06:00:00-07:00",
+	"/events/mega-salamence-in-mega-raids-july-2026/": {
+		"title": "Mega Salamence in Mega Raids",
+		"description": "Mega Salamence will be in Mega Raids from July 22, 2026 at 6 am to July 28, 2026 at 10 pm local time.",
+		"startDate": "2026-07-22T06:00:00-07:00",
+		"endDate": "2026-07-28T22:00:00-07:00",
 		"eventType": 2,
-		"link": "https://leekduck.com/events/mega-pidgeot-in-mega-raids-june-2026/",
+		"link": "https://leekduck.com/events/mega-salamence-in-mega-raids-july-2026/",
 		"pokemonList": {
-			"Pidgeot": {}
+			"Salamence": {}
 		},
 		"legendaryList": {},
 		"megaList": {
-			"Mega Pidgeot": {}
+			"Mega Salamence": {}
 		}
 	},
+	"/events/mega-sceptile-in-mega-raids-july-2026/": {
+		"title": "Mega Sceptile in Mega Raids",
+		"description": "Mega Sceptile will be in Mega Raids from July 15, 2026 at 6 am to July 21, 2026 at 10 pm local time.",
+		"startDate": "2026-07-15T06:00:00-07:00",
+		"endDate": "2026-07-21T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-sceptile-in-mega-raids-july-2026/",
+		"pokemonList": {
+			"Sceptile": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Sceptile": {}
+		}
+	},
+	"/events/ozone-ascent-2026/": {
+		"title": "Ozone Ascent",
+		"description": "Complete Timed Research to encounter Rayquaza and more!\n\nThe Ozone Ascent event will take place from July 25, 2026 at 10 am to July 26, 2026 at 8 pm.",
+		"startDate": "2026-07-25T10:00:00-07:00",
+		"endDate": "2026-07-26T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/ozone-ascent-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Rayquaza": {}
+		},
+		"megaList": {}
+	},
 	"/events/pokemon-go-fest-2026-global/": {
-		"title": "Pokémon GO Fest 2026: Global",
+		"title": "Pokémon GO Fest 2026: Global",
 		"description": "Join millions of Trainers across the globe for Pokémon GO Fest 2026: Global! This worldwide event takes place from July 11, 2026 at 10 am to July 12, 2026 at 7 pm local time.\n\nFor the first time, GO Fest: Global is free for all Trainers who log in during event weekend. Everyone can access the featured Special Research, event bonuses, and increased Shiny encounter opportunities at no cost.",
 		"startDate": "2026-07-11T10:00:00-07:00",
 		"endDate": "2026-07-12T19:00:00-07:00",
@@ -300,19 +357,57 @@
 			"Mega Tyranitar": {}
 		}
 	},
-	"/events/raidhour20260701/": {
-		"title": "Articuno, Zapdos, and Moltres Raid Hour",
-		"description": "A Raid Hour featuring Articuno, Zapdos, and Moltres is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
-		"startDate": "2026-07-01T18:00:00-07:00",
-		"endDate": "2026-07-01T19:00:00-07:00",
+	"/events/raichu-super-mega-raid-day-2026/": {
+		"title": "Raichu Super Mega Raid Day",
+		"description": "Sparks fly for Raichu Super Mega Raid Day!",
+		"startDate": "2026-07-18T14:00:00-07:00",
+		"endDate": "2026-07-18T17:00:00-07:00",
+		"eventType": 3,
+		"link": "https://leekduck.com/events/raichu-super-mega-raid-day-2026/",
+		"pokemonList": {
+			"Raichu": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Raichu X": {},
+			"Mega Raichu Y": {}
+		}
+	},
+	"/events/raidhour20260715/": {
+		"title": "Kyogre Raid Hour",
+		"description": "A Raid Hour featuring Kyogre is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-07-15T18:00:00-07:00",
+		"endDate": "2026-07-15T19:00:00-07:00",
 		"eventType": 4,
-		"link": "https://leekduck.com/events/raidhour20260701/",
+		"link": "https://leekduck.com/events/raidhour20260715/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260722/": {
+		"title": "Solgaleo Raid Hour",
+		"description": "A Raid Hour featuring Solgaleo is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-07-22T18:00:00-07:00",
+		"endDate": "2026-07-22T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260722/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260729/": {
+		"title": "Kyurem Raid Hour",
+		"description": "A Raid Hour featuring Kyurem is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-07-29T18:00:00-07:00",
+		"endDate": "2026-07-29T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260729/",
 		"pokemonList": {},
 		"legendaryList": {},
 		"megaList": {}
 	},
 	"/events/road-of-legends-2026/": {
-		"title": "Road of Legends",
+		"title": "Road of Legends",
 		"description": "The countdown to Pokémon GO Fest 2026: Global starts here! During the Road of Legends, Trainers around the world can gear up for the big weekend with a full week of powerful raid encounters, event bonuses, and GO Pass rewards. Whether you’re looking to strengthen your team, stock up on rewards, or take on some of Pokémon GO’s most formidable foes, this is your chance to get ready for the adventure ahead.",
 		"startDate": "2026-07-06T00:01:00-07:00",
 		"endDate": "2026-07-10T23:59:00-07:00",
@@ -438,17 +533,54 @@
 			"Mega Tyranitar": {}
 		}
 	},
-	"/events/shadow-dialga-in-shadow-raids-june-2026/": {
-		"title": "Shadow Dialga in Shadow Raids",
-		"description": "Shadow Dialga will appear in Pokemon GO in Shadow Raids. If you’re lucky you’ll be able to encounter Shiny Shadow Dialga!\n\nShadow Dialga will appear in five-star Shadow Raids every weekend from June 2 to June 30.",
-		"startDate": "2026-06-02T06:00:00-07:00",
-		"endDate": "2026-06-30T22:00:00-07:00",
+	"/events/shadow-palkia-in-shadow-raids-july-2026/": {
+		"title": "Shadow Palkia in Shadow Raids",
+		"description": "Shadow Palkia will appear in Pokemon GO in Shadow Raids. If you’re lucky you’ll be able to encounter Shiny Shadow Palkia!\n\nShadow Palkia will appear in five-star Shadow Raids every weekend from July 1 to August 4.",
+		"startDate": "2026-07-01T06:00:00-07:00",
+		"endDate": "2026-08-04T22:00:00-07:00",
 		"eventType": 2,
-		"link": "https://leekduck.com/events/shadow-dialga-in-shadow-raids-june-2026/",
+		"link": "https://leekduck.com/events/shadow-palkia-in-shadow-raids-july-2026/",
 		"pokemonList": {},
 		"legendaryList": {
-			"Dialga": {}
+			"Palkia": {}
 		},
+		"megaList": {}
+	},
+	"/events/solgaleo-in-5-star-raid-battles-july-2026/": {
+		"title": "Solgaleo in 5-star Raid Battles",
+		"description": "Solgaleo will be in five-star raid battles from July 22, 2026 to July 28, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Solgaleo from 6:00 pm to 7:00 pm local time on the following date:\n\n- July 22",
+		"startDate": "2026-07-22T06:00:00-07:00",
+		"endDate": "2026-07-28T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/solgaleo-in-5-star-raid-battles-july-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Solgaleo": {}
+		},
+		"megaList": {}
+	},
+	"/events/special-anniversary-pikachu-celebration-2026/": {
+		"title": "Special Anniversary Pikachu Celebration",
+		"description": "Keep the festivities going with three celebrations of different costumed Pikachu!\n\nThe Special Anniversary Pikachu Celebration event will take place from July 13, 2026 at 10 am to July 20, 2026 at 8 pm.",
+		"startDate": "2026-07-13T10:00:00-07:00",
+		"endDate": "2026-07-20T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/special-anniversary-pikachu-celebration-2026/",
+		"pokemonList": {
+			"Amethyst Crown Pikachu": {},
+			"Dapper Pikachu with blue accents": {},
+			"Dapper Pikachu with red accents": {},
+			"Dapper Pikachu with yellow accents": {},
+			"Pikachu wearing a Tricks \u0026 Treats costume": {},
+			"Pikachu wearing a varsity jacket": {},
+			"Safari Hat Pikachu": {},
+			"Summer Style Pikachu": {},
+			"Winter Carnival Pikachu": {},
+			"World Championships 2022 Pikachu": {},
+			"World Championships 2023 Pikachu": {},
+			"World Championships 2024 Pikachu": {}
+		},
+		"legendaryList": {},
 		"megaList": {}
 	}
 }

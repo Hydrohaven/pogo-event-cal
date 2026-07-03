@@ -85,7 +85,7 @@ func startSync() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 20).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, 40).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
@@ -135,17 +135,10 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
 		event.Title = strings.TrimSpace(s.Find(".page-title").First().Text())
+		event.Title = strings.ReplaceAll(event.Title, "\u00a0", " ")
 		event.Description = parseDescription(s.Find(".event-description"))
-		if t, err := time.Parse(time.RFC3339, startDate); err == nil {
-			event.StartDate = t.Local()
-		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", startDate, time.Local); err == nil {
-			event.StartDate = t
-		}
-		if t, err := time.Parse(time.RFC3339, endDate); err == nil {
-			event.EndDate = t.Local()
-		} else if t, err := time.ParseInLocation("2006-01-02T15:04:05", endDate, time.Local); err == nil {
-			event.EndDate = t
-		}
+		event.StartDate = localize(startDate)
+		event.EndDate = localize(endDate)
 		event.EventType = stringToEventType[s.Find(".page-tags .tag").First().Text()]
 		event.Link = baseURL + slug
 
@@ -203,11 +196,13 @@ func ignoreGenesect(s string) bool {
 }
 
 func postEvent(e CalendarEvent) {
+	// If first time using calendar, Load calendar data and env variable
 	if !isCalSynced {
 		syncCalendar()
 		isCalSynced = true
 	}
 
+	// Make Mega Raids dark green
 	var colorId string
 	if strings.Contains(e.Title, "Mega Raids") {
 		colorId = Basil
@@ -215,16 +210,38 @@ func postEvent(e CalendarEvent) {
 		colorId = e.EventType.ColorId()
 	}
 
+	// Make shadow raids show only on weekends
+	var repeat []string
+	if strings.Contains(e.Title, "Shadow Raids") {
+		colorId = Grape
+		endDate := e.StartDate.AddDate(0, 0, 7)
+
+		for day := e.StartDate; day.Compare(endDate) != 1; day = day.Add(time.Hour * 24) {
+			// Lowk i think its never gonna hit sunday before saturday
+			if day.Weekday() == time.Saturday || day.Weekday() == time.Sunday {
+				e.StartDate = localize(day)
+				e.EndDate = localize(day.Add(time.Hour * 24))
+				repeat = []string{"RRULE:FREQ=WEEKLY;COUNT=4"}
+				break
+			}
+		}
+	}
+
+	// Create and post new pogo event
 	gcalEvent := calendar.Event{
 		Summary:     e.Title,
 		Location:    e.Link,
 		Description: e.Description,
 		Start: &calendar.EventDateTime{
-			DateTime: e.StartDate.Format(time.RFC3339)},
-		End: &calendar.EventDateTime{
-			DateTime: e.EndDate.Format(time.RFC3339),
+			DateTime: e.StartDate.UTC().Format(time.RFC3339),
+			TimeZone: "UTC",
 		},
-		ColorId: colorId,
+		End: &calendar.EventDateTime{
+			DateTime: e.EndDate.UTC().Format(time.RFC3339),
+			TimeZone: "UTC",
+		},
+		ColorId:    colorId,
+		Recurrence: repeat,
 	}
 
 	event, err := srv.Events.Insert(calendarID, &gcalEvent).Do()
@@ -285,4 +302,19 @@ func deleteAllEvents() {
 		fmt.Println("<> Cleared all calendar events <>")
 	}
 	startCLI()
+}
+
+func localize(val any) time.Time {
+	switch v := val.(type) {
+	case string:
+		if t, err := time.Parse(time.RFC3339, v); err == nil {
+			return t.Local()
+		}
+		if t, err := time.ParseInLocation("2006-01-02T15:04:05", v, time.Local); err == nil {
+			return t
+		}
+	case time.Time:
+		return v.Local()
+	}
+	return time.Time{}
 }

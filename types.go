@@ -20,7 +20,7 @@ const (
 )
 
 const (
-	Lavender  = "1"  // Light Blue / Periwinkle
+	Lavender  = "1"  // Light Purple
 	Sage      = "2"  // Light Green
 	Grape     = "3"  // Purple
 	Flamingo  = "4"  // Pink
