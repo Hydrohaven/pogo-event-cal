@@ -43,6 +43,7 @@ func syncCalendar() {
 		_ = json.Unmarshal(data, &config)
 	}
 	calendarID = config["calendar_id"]
+	fmt.Println("<> Calendar is synced <>")
 }
 
 func startSync() {
@@ -85,23 +86,36 @@ func startSync() {
 	}
 
 	// Fetch event link and dates
-	doc.Find(".event-header-item-wrapper").Slice(0, 40).Each(func(i int, s *goquery.Selection) {
+	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
 		endDate, _ := s.Attr("data-event-end-date")
 		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+slug)
 
-		// ==== <2.5> Skip events I don't like ====
+		// ==== <2.5> Skip events that meet certain conditions ====
+		// Condition 1: Events I don't like, aka not in the stringToEventType array
 		cleanType := strings.TrimSpace(eventType)
 		if _, ok := stringToEventType[cleanType]; !ok {
-			fmt.Printf("@ Skipped %v\n", cleanType)
+			fmt.Printf("<SKIP> I don't like this event type, %v <SKIP>\n", cleanType)
 			return
 		}
 
-		// ==== <3> Compare Curr to Cache ====
+		// Condition 2: Events more than 3 weeks in the future
+		futureTime := time.Now().AddDate(0, 0, 21)
+
+		if localize(startDate).Compare(futureTime) != -1 {
+			fmt.Print("<SKIP> Event too far into the future <SKIP>\n")
+			return
+		}
+
+		// ==== <3> Skip events already logged in cache by slug ====
+		// Note: This will have to be refactored in the future in the case we
+		//       log and event that we want to update an incomplete event that
+		//       we logged. For now, I'm just only adding events no more than
+		//       3 weeeks in the future though!
 		if _, ok := eventCache[slug]; ok {
-			fmt.Printf("Skipped %v\n", slug)
+			fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
 			return
 		}
 
@@ -114,8 +128,6 @@ func startSync() {
 	// ==== <5> Encode new data to cache ====
 	cacheData, _ := json.MarshalIndent(eventCache, "", "\t")
 	_ = os.WriteFile("cache.json", cacheData, 0644) // 0644 gives rw perms
-
-	startCLI()
 }
 
 func parseEventData(baseURL string, slug string, startDate string, endDate string) {
@@ -289,10 +301,13 @@ func deleteAllEvents() {
 			// Calendars.Clear only works on the "primary" calendar.
 			// If this is a secondary calendar, we must list and delete events one by one.
 			events, listErr := srv.Events.List(calendarID).Do()
+			fmt.Printf("Items found: %d, Next Page Token: %s\n", len(events.Items), events.NextPageToken)
+			fmt.Println("--------------------------------check3")
 			if listErr != nil {
 				log.Fatalf("Unable to retrieve events: %v", listErr)
 			}
 			for _, item := range events.Items {
+				fmt.Printf("--------------------------------item: %v\n", item)
 				err := srv.Events.Delete(calendarID, item.Id).Do()
 				if err != nil {
 					log.Printf("Could not delete event %s: %v\n", item.Summary, err)
@@ -301,9 +316,9 @@ func deleteAllEvents() {
 		}
 		fmt.Println("<> Cleared all calendar events <>")
 	}
-	startCLI()
 }
 
+// Localizes any string or time.Time object to your local time.
 func localize(val any) time.Time {
 	switch v := val.(type) {
 	case string:
