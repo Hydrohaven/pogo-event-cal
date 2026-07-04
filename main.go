@@ -14,8 +14,9 @@ import (
 	"google.golang.org/api/calendar/v3"
 )
 
-var legendaries = make(map[string]bool)
-var eventCache = make(map[string]CalendarEvent)
+var legendaries = make(map[string]bool)         // Map of all legendaries, mythicals, and ultra beasts
+var tempCache = make(map[string]bool)           // Temporary cache deleted at program close
+var eventCache = make(map[string]CalendarEvent) // Long term cache to keep track of all logged events over 1 month
 var ctx context.Context
 var srv *calendar.Service
 var calendarID string
@@ -109,11 +110,28 @@ func startSync() {
 			return
 		}
 
+		// Condition 3: Eveents more than 2 months old
+		//  p.s. actually doing this for events on 01/01/01 for some reason, LEEKDUCK GLITCH
+		pastTime := time.Now().AddDate(0, 0, -21)
+
+		if localize(startDate).Compare(pastTime) != 1 {
+			fmt.Print("<SKIP> Event too far into the past <SKIP>\n")
+			return
+		}
+
 		// ==== <3> Skip events already logged in cache by slug ====
 		// Note: This will have to be refactored in the future in the case we
 		//       log and event that we want to update an incomplete event that
 		//       we logged. For now, I'm just only adding events no more than
 		//       3 weeeks in the future though!
+
+		// Short-term Cache: Made because sometimes I ran into weird duplicate ghost events
+		if _, ok := tempCache[slug]; ok {
+			fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
+			return
+		}
+
+		// Long-term Cache
 		if _, ok := eventCache[slug]; ok {
 			fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
 			return
@@ -158,8 +176,11 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 	})
 
 	eventCache[slug] = event
-	fmt.Println(event)
-	fmt.Print("\n\n")
+	tempCache[slug] = true
+
+	// Print Parsed Event
+	// fmt.Println(event)
+	// fmt.Print("\n\n")
 }
 
 func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
@@ -296,22 +317,38 @@ func deleteAllEvents() {
 
 	switch check {
 	case "Y", "y":
-		err := srv.Calendars.Clear(calendarID).Do()
-		if err != nil {
-			// Calendars.Clear only works on the "primary" calendar.
-			// If this is a secondary calendar, we must list and delete events one by one.
-			events, listErr := srv.Events.List(calendarID).Do()
-			fmt.Printf("Items found: %d, Next Page Token: %s\n", len(events.Items), events.NextPageToken)
-			fmt.Println("--------------------------------check3")
+		// Page Token shennanigans cuz if I'm doing back-to-back large requests to GCal,
+		//  Google creates a new page to put modified data on and sets the initial one as "tombstone"
+		//  as to let other systems know that that page no longer has any data on it
+		// If I don't manually specify the next page token with req.PageToken(), my code
+		//  would only look at the tombstone page, thus ending the function pre-maturely.
+		var pageToken string
+		for {
+			// 1. Build the request
+			req := srv.Events.List(calendarID)
+			if pageToken != "" {
+				req.PageToken(pageToken)
+			}
+
+			// 2. Fetch the current page
+			events, listErr := req.Do() // Populates events.NextPageToken
 			if listErr != nil {
 				log.Fatalf("Unable to retrieve events: %v", listErr)
 			}
+
+			// 3. Delete everything found on THIS page
 			for _, item := range events.Items {
-				fmt.Printf("--------------------------------item: %v\n", item)
+				fmt.Printf("Deleted: %v\n", item.Summary)
 				err := srv.Events.Delete(calendarID, item.Id).Do()
 				if err != nil {
 					log.Printf("Could not delete event %s: %v\n", item.Summary, err)
 				}
+			}
+
+			// 4. Move to the next page, or break if we are completely done
+			pageToken = events.NextPageToken
+			if pageToken == "" {
+				break
 			}
 		}
 		fmt.Println("<> Cleared all calendar events <>")

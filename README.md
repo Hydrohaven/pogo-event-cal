@@ -37,9 +37,7 @@ graph TD
 I wanted to learn Go in a fun way and really didn't wanna go through Tour of Go cuz it looked REALLY long and boring, so here I am. I also really love Pokemon Go so this seem liked a perfect way to learn the language!
 
 # Current Additions
-Lil todo list for me for the remaining features of the app after Day 1
 - Add pokemon to description of event (tweak with redability)
-- Make it query the next 2-4 weeks of events instead of a fixed amount (prolly 3 weeks to make sure things are updated properly on leekduck) 
 
 # Future Additions
 - Web-based dashboard to query all logged events to view featured pokemon, what region they're from, etc. for collection/research tasks
