@@ -126,6 +126,19 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/max-mondays-2026-07-27/": {
+		"title": "Dynamax Feebas during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn July 27, 2026, the featured Dynamax Pokemon is Feebas.\n\n- Feebas",
+		"startDate": "2026-07-27T06:00:00-07:00",
+		"endDate": "2026-07-27T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-07-27/",
+		"pokemonList": {
+			"Feebas": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
 	"/events/mega-lucario-in-mega-raids-july-13-2026/": {
 		"title": "Mega Lucario in Mega Raids - July 13",
 		"description": "Mega Lucario returns to Mega Raids from July 13, 2026 at 6 am to July 14, 2026 at 10 pm local time.",
@@ -185,6 +198,19 @@
 		"megaList": {
 			"Mega Sceptile": {}
 		}
+	},
+	"/events/ozone-ascent-2026/": {
+		"title": "Ozone Ascent",
+		"description": "Complete Timed Research to encounter Rayquaza and more!\n\nThe Ozone Ascent event will take place from July 25, 2026 at 10 am to July 26, 2026 at 8 pm.",
+		"startDate": "2026-07-25T10:00:00-07:00",
+		"endDate": "2026-07-26T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/ozone-ascent-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Rayquaza": {}
+		},
+		"megaList": {}
 	},
 	"/events/pokemon-go-fest-2026-global/": {
 		"title": "Pokémon GO Fest 2026: Global",
