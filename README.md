@@ -42,7 +42,18 @@ I wanted to learn Go in a fun way and really didn't wanna go through Tour of Go 
 - Add pokemon to description of event (tweak with redability)
 
 # Future Additions
-- Web-based dashboard to query all logged events to view featured pokemon, what region they're from, etc. for collection/research tasks
+- Update CLI to feel and look like Jetski's (would LOVE if I could somehow add color to the CLI)
+- Incorporate two separate ways to run the app once built
+   1. `pcs cli` which runs the cli normally
+   2. `pcs cron` which skips straight to running the calendar sync
+- Additional web-based dashboard that:
+   - Neatly displays all events in `cache.json` in clickable components
+   - Fetches all pokemon listed in `cache.json` and lists them in components
+   - Pokemon region and other additional information should be listed as well
+   - Dashboard should have a search bar filter to events based on title, date, region, pokemon, legendaries/mythicals, etc.
+   - Dashboard should distinguish past and present events
+   - Dashboard will NOT look AI'd and should mostly be done completely by hand
+   - [Optional] Connectivity with scheduled cli tool
 - Additional chrome extension to add custom banners to calendar events by:
    1. Automatically detecting the "pdqVLc" class (inner-most parent div of a gcal popup component)
    2. Proceed to get its first child which should have class "Tnsqdc "
