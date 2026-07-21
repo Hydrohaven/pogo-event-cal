@@ -27,8 +27,19 @@ func main() {
 	// Setup env variables
 	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "service-worker-auth.json")
 
-	// Start CLI
-	startCLI()
+	// Gather args
+	args := os.Args
+
+	// Start CLI by default
+	if len(args) < 2 {
+		startCLI()
+		return
+	}
+
+	// Skip CLI with no_cli flag
+	if args[1] == "--no_cli" {
+		startSync()
+	}
 }
 
 func syncCalendar() {
