@@ -98,18 +98,18 @@ func startSync() {
 	}
 
 	// Fetch event link and dates
+	fmt.Println(time.Now().Format("01/02/2006 — 15:04:05"))
 	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
 		startDate, _ := s.Attr("data-event-start-date-check")
 		endDate, _ := s.Attr("data-event-end-date")
-		fmt.Printf("Item %-4d %-25s %s\n", i, eventType, baseURL+slug)
 
 		// ==== <2.5> Skip events that meet certain conditions ====
 		// Condition 1: Events I don't like, aka not in the stringToEventType array
 		cleanType := strings.TrimSpace(eventType)
 		if _, ok := stringToEventType[cleanType]; !ok {
-			fmt.Printf("<SKIP> I don't like this event type, %v <SKIP>\n", cleanType)
+			// fmt.Printf("<SKIP> I don't like this event type, %v <SKIP>\n", cleanType)
 			return
 		}
 
@@ -117,7 +117,7 @@ func startSync() {
 		futureTime := time.Now().AddDate(0, 0, 21)
 
 		if localize(startDate).Compare(futureTime) != -1 {
-			fmt.Print("<SKIP> Event too far into the future <SKIP>\n")
+			// fmt.Print("<SKIP> Event too far into the future <SKIP>\n")
 			return
 		}
 
@@ -126,7 +126,7 @@ func startSync() {
 		pastTime := time.Now().AddDate(0, 0, -21)
 
 		if localize(startDate).Compare(pastTime) != 1 {
-			fmt.Print("<SKIP> Event too far into the past <SKIP>\n")
+			// fmt.Print("<SKIP> Event too far into the past <SKIP>\n")
 			return
 		}
 
@@ -138,16 +138,17 @@ func startSync() {
 
 		// Short-term Cache: Made because sometimes I ran into weird duplicate ghost events
 		if _, ok := tempCache[slug]; ok {
-			fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
+			// fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
 			return
 		}
 
 		// Long-term Cache
 		if _, ok := eventCache[slug]; ok {
-			fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
+			// fmt.Printf("<SKIP> %v is already logged <SKIP>\n", slug)
 			return
 		}
 
+		fmt.Printf("<%-25s %s>\n", eventType, baseURL+slug)
 		parseEventData(baseURL, slug, startDate, endDate)
 
 		// ==== <4> GCal POST Request ====
@@ -188,10 +189,6 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 
 	eventCache[slug] = event
 	tempCache[slug] = true
-
-	// Print Parsed Event
-	// fmt.Println(event)
-	// fmt.Print("\n\n")
 }
 
 func parsePokemonData(s *goquery.Selection, e *CalendarEvent) {
