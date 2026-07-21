@@ -98,7 +98,7 @@ func startSync() {
 	}
 
 	// Fetch event link and dates
-	fmt.Println(time.Now().Format("01/02/2006 — 15:04:05"))
+	fmt.Println(time.Now().Format("01/02/2006 — 15:04:05") + "\n")
 	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
