@@ -97,9 +97,10 @@ func startSync() {
 		log.Fatal(err)
 	}
 
-	// Fetch event link and dates
-	fmt.Println(localize(time.Now()).Format("01/02/2006 — 15:04:05") + "\n")
+	// Print date for cron log
+	fmt.Println(localize(time.Now()).Format("01/02/2006 — 15:04:05 PT") + "\n")
 
+	// Fetch event link and dates
 	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
 		eventType := s.Find(".event-item-wrapper").Find("p").First().Text()
 		slug, _ := s.Find("a").Attr("href")
