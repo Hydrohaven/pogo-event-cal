@@ -17,6 +17,7 @@ const (
 	MaxMonday
 	SpotlightHour
 	PokemonGoFest
+	MaxBattles
 )
 
 const (
@@ -43,6 +44,7 @@ var stringToEventType = map[string]EventType{
 	"Max Mondays":     MaxMonday,
 	"Spotlight Hour":  SpotlightHour,
 	"Pokémon GO Fest": PokemonGoFest,
+	"Max Battles":     MaxBattles,
 }
 
 func (e EventType) String() string {
@@ -56,6 +58,7 @@ func (e EventType) String() string {
 		"Max Mondays",
 		"Spotlight Hour",
 		"PokemonGoFest",
+		"Max Battles",
 	}
 	if e < 0 || int(e) >= len(names) {
 		return fmt.Sprintf("EventType(%d)", e)
@@ -81,6 +84,8 @@ func (e EventType) ColorId() string {
 		return Lavender
 	case PokemonGoFest:
 		return Blueberry
+	case MaxBattles:
+		return Flamingo
 	default:
 		return Tangerine
 	}
