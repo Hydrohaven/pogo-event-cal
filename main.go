@@ -97,7 +97,7 @@ func startSync() {
 	}
 
 	// Print date for cron log
-	fmt.Println(localize(time.Now()).Format("01/02/2006 — 15:04:05 PT") + "\n")
+	fmt.Println(localize(time.Now()).Format("01/02/2006 — 15:04:05 PT"))
 
 	// Fetch event link and dates
 	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
