@@ -55,7 +55,6 @@ func syncCalendar() {
 		_ = json.Unmarshal(data, &config)
 	}
 	calendarID = config["calendar_id"]
-	fmt.Println("<> Calendar is synced <>")
 }
 
 func startSync() {
@@ -150,7 +149,6 @@ func startSync() {
 			return
 		}
 
-		fmt.Printf("<%-25s %s>\n", eventType, baseURL+slug)
 		parseEventData(baseURL, slug, startDate, endDate)
 
 		// ==== <4> GCal POST Request ====
@@ -175,7 +173,7 @@ func parseEventData(baseURL string, slug string, startDate string, endDate strin
 		log.Fatal(err)
 	}
 
-	// Popular CalenderEvent
+	// Populate CalenderEvent
 	event := CalendarEvent{}
 	doc.Find(".page-content").Each(func(i int, s *goquery.Selection) {
 		event.Title = strings.TrimSpace(s.Find(".page-title").First().Text())
@@ -287,11 +285,13 @@ func postEvent(e CalendarEvent) {
 		Recurrence: repeat,
 	}
 
-	event, err := srv.Events.Insert(calendarID, &gcalEvent).Do()
+	_, err := srv.Events.Insert(calendarID, &gcalEvent).Do()
 	if err != nil {
 		log.Fatalf("Unable to create event. %v\n", err)
 	}
-	fmt.Printf("Event created: %s\n", event.HtmlLink)
+
+	fmt.Printf("<Added> %s on %v\n", gcalEvent.Summary, e.StartDate.UTC().Format("10/06/2005"))
+	fmt.Printf("Link: %v\n", gcalEvent.Location)
 }
 
 func parseDescription(desc *goquery.Selection) string {
