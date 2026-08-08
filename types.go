@@ -35,16 +35,16 @@ const (
 )
 
 var stringToEventType = map[string]EventType{
-	"Default":         Default,
-	"Event":           Event,
-	"Raid Battles":    RaidBattle,
-	"Raid Day":        RaidDay,
-	"Raid Hour":       RaidHour,
-	"Community Day":   CommunityDay,
-	"Max Mondays":     MaxMonday,
-	"Spotlight Hour":  SpotlightHour,
-	"Pokémon GO Fest": PokemonGoFest,
-	"Max Battles":     MaxBattles,
+	"Default":                Default,
+	"Event":                  Event,
+	"Raid Battles":           RaidBattle,
+	"Raid Day":               RaidDay,
+	"Raid Hour":              RaidHour,
+	"Community Day":          CommunityDay,
+	"Max Mondays":            MaxMonday,
+	"Pokémon Spotlight Hour": SpotlightHour,
+	"Pokémon GO Fest":        PokemonGoFest,
+	"Max Battles":            MaxBattles,
 }
 
 func (e EventType) String() string {
