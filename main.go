@@ -97,7 +97,7 @@ func startSync() {
 	}
 
 	// Print date for cron log
-	fmt.Println(localize(time.Now()).Format("01/02/2006 — 15:04:05 PT"))
+	fmt.Println(localize(time.Now()).Format("01/02/2006"))
 
 	// Fetch event link and dates
 	doc.Find(".event-header-item-wrapper").Slice(0, goquery.ToEnd).Each(func(i int, s *goquery.Selection) {
@@ -290,7 +290,7 @@ func postEvent(e CalendarEvent) {
 		log.Fatalf("Unable to create event. %v\n", err)
 	}
 
-	fmt.Printf("<Added> %s on %v\n", gcalEvent.Summary, e.StartDate.UTC().Format("10/06/2005"))
+	fmt.Printf("<Added> %s on %v\n", gcalEvent.Summary, e.StartDate.UTC().Format("01/02/2006"))
 	fmt.Printf("Link: %v\n", gcalEvent.Location)
 }
 
@@ -312,6 +312,13 @@ func parseDescription(desc *goquery.Selection) string {
 }
 
 func deleteAllEvents() {
+	prod := true
+
+	if prod {
+		fmt.Println("This function should not be ran ever again. There is too much in the calendar to be using this too. Shutting down")
+		return
+	}
+
 	if !isCalSynced {
 		syncCalendar()
 		isCalSynced = true
