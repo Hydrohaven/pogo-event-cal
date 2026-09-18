@@ -1,4 +1,17 @@
 {
+	"/events/10th-anniversary-celebration/": {
+		"title": "10th Anniversary Celebration - Perfect Mewtwo Timed Research",
+		"description": "Every Trainer can celebrate 10 years of Pokémon GO with a special Mewtwo!\n\nThe Perfect Mewtwo Timed Research will be available from August 12, 2026 at 4:00 p.m. PDT to September 6, 2026 at 11 pm local time.",
+		"startDate": "2026-08-12T16:00:00-07:00",
+		"endDate": "2026-09-06T23:59:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/10th-anniversary-celebration/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Mewtwo": {}
+		},
+		"megaList": {}
+	},
 	"/events/10th-anniversary-party/": {
 		"title": "10th Anniversary Party",
 		"description": "Celebrate a decade of Pokémon GO together during the 10th Anniversary Party!\n\nThe 10th Anniversary Party event will take place from July 4, 2026 at 10 am to July 6, 2026 at 8 pm.",
@@ -31,6 +44,19 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/armored-mewtwo-in-5-star-raid-battles-september-2026/": {
+		"title": "Armored Mewtwo in 5-star Raid Battles",
+		"description": "Armored Mewtwo is back! Last seen in 2020, Armored Mewtwo will return to five-star Raid Battles for a limited time during Pokémon GO Fest 2026: Mega Finale.\n\nArmored Mewtwo will appear in five-star raids on both Saturday, September 5, and Sunday, September 6, 2026, from 10:00 a.m. to 6:00 p.m. local time.\n\nShiny Armored Mewtwo will not be available during this event.",
+		"startDate": "2026-09-05T10:00:00-07:00",
+		"endDate": "2026-09-06T18:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/armored-mewtwo-in-5-star-raid-battles-september-2026/",
+		"pokemonList": {
+			"Armored Mewtwo": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
 	"/events/articuno-zapdos-moltres-in-5-star-raid-battles-july-2026/": {
 		"title": "Articuno, Zapdos, and Moltres in 5-star Raid Battles",
 		"description": "Articuno, Zapdos, and Moltres will be in five-star raid battles from July 1, 2026 to July 5, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Articuno, Zapdos, and Moltres from 6:00 pm to 7:00 pm local time on the following date:\n\n- July 1",
@@ -44,6 +70,35 @@
 			"Moltres": {},
 			"Zapdos": {}
 		},
+		"megaList": {}
+	},
+	"/events/august-communityday2026/": {
+		"title": "Nickit Community Day",
+		"description": "Nickit, the Fox Pokémon, will be featured during August Community Day!",
+		"startDate": "2026-08-16T14:00:00-07:00",
+		"endDate": "2026-08-16T17:00:00-07:00",
+		"eventType": 5,
+		"link": "https://leekduck.com/events/august-communityday2026/",
+		"pokemonList": {
+			"Nickit": {},
+			"Thievul": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/catch-mastery-phantump-2026/": {
+		"title": "Phantump Catch Mastery",
+		"description": "Get ready for a Catch Mastery event featuring Phantump, the Stump Pokémon!",
+		"startDate": "2026-09-26T10:00:00-07:00",
+		"endDate": "2026-09-26T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/catch-mastery-phantump-2026/",
+		"pokemonList": {
+			"Cherubi": {},
+			"Drifloon": {},
+			"Phantump": {}
+		},
+		"legendaryList": {},
 		"megaList": {}
 	},
 	"/events/fire-and-ice-hatch-day-2026/": {
@@ -64,6 +119,45 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/gigantamax-cinderace-max-battle-day-2026/": {
+		"title": "Gigantamax Cinderace Max Battle Day",
+		"description": "The Gigantamax Cinderace Max Battle Day event will take place on October 3, 2026 from 2 pm to 5 pm local time.",
+		"startDate": "2026-10-03T14:00:00-07:00",
+		"endDate": "2026-10-03T17:00:00-07:00",
+		"eventType": 9,
+		"link": "https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/",
+		"pokemonList": {
+			"Gigantamax Cinderace": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/gigantamax-rillaboom-max-battle-day-2026/": {
+		"title": "Gigantamax Rillaboom Max Battle Day",
+		"description": "The Gigantamax Rillaboom Max Battle Day event will take place on August 1, 2026 from 2 pm to 5 pm local time.",
+		"startDate": "2026-08-01T14:00:00-07:00",
+		"endDate": "2026-08-01T17:00:00-07:00",
+		"eventType": 9,
+		"link": "https://leekduck.com/events/gigantamax-rillaboom-max-battle-day-2026/",
+		"pokemonList": {
+			"Gigantamax Rillaboom": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/groudon-in-5-star-raid-battles-august-2026/": {
+		"title": "Groudon in 5-star Raid Battles",
+		"description": "Groudon will be in five-star raid battles from August 12, 2026 to August 18, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Groudon from 6:00 pm to 7:00 pm local time on the following date:\n\n- August 12",
+		"startDate": "2026-08-12T06:00:00-07:00",
+		"endDate": "2026-08-18T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/groudon-in-5-star-raid-battles-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Groudon": {}
+		},
+		"megaList": {}
+	},
 	"/events/happy-birthday-professor-willow-2026/": {
 		"title": "Happy Birthday, Professor Willow!",
 		"description": "Wish Professor Willow a very happy birthday with Professor Willow’s assistant Pikachu!\n\nThe Happy Birthday, Professor Willow! event will take place on July 21, 2026 from 10 am to 8 pm.",
@@ -75,6 +169,52 @@
 			"Professor Willow's assistant Pikachu": {}
 		},
 		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/harvest-festival-2026/": {
+		"title": "Harvest Festival 2026: Applin Picking",
+		"description": "Harvest Festival returns with the Pokémon GO debut of Shiny Applin! Gather apples, choose a Timed Research path, and earn rewards through the event GO Pass.\n\nThe Harvest Festival 2026: Applin Picking event will take place from September 29, 2026 at 10 am to October 5, 2026 at 8 pm local time.",
+		"startDate": "2026-09-29T10:00:00-07:00",
+		"endDate": "2026-10-05T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/harvest-festival-2026/",
+		"pokemonList": {
+			"Appletun": {},
+			"Applin": {},
+			"Arboliva": {},
+			"Dipplin": {},
+			"Dolliv": {},
+			"Flapple": {},
+			"Flower Crown Cottonee": {},
+			"Hydrapple": {},
+			"Lechonk": {},
+			"Skwovet": {},
+			"Smoliv": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/harvest-festival-taken-over-2026/": {
+		"title": "Harvest Festival: Taken Over",
+		"description": "Rescue Shadow Zekrom as Team GO Rocket takes over the Harvest Festival!\n\nThe Harvest Festival: Taken Over event will take place from October 2, 2026 at 12 am to October 5, 2026 at 8 pm local time.",
+		"startDate": "2026-10-02T00:00:00-07:00",
+		"endDate": "2026-10-05T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/harvest-festival-taken-over-2026/",
+		"pokemonList": {
+			"Fomantis": {},
+			"Grafaiai": {},
+			"Koffing": {},
+			"Magmar": {},
+			"Numel": {},
+			"Sandygast": {},
+			"Shroodle": {},
+			"Slugma": {},
+			"Wimpod": {}
+		},
+		"legendaryList": {
+			"Zekrom": {}
+		},
 		"megaList": {}
 	},
 	"/events/july-communityday2026/": {
@@ -115,6 +255,32 @@
 		"pokemonList": {},
 		"legendaryList": {
 			"Kyurem": {}
+		},
+		"megaList": {}
+	},
+	"/events/lego-pokemon-go-2026/": {
+		"title": "LEGO Stores and Pokémon GO",
+		"description": "The Pokémon GO and LEGO Group partnership continues for Trainers in the US, UK, Poland, France, Germany, and Australia! Visit participating LEGO Store locations for raids, a LEGO-themed stamp rally, event stickers, and LEGO Pokémon SMART Play.\n\nThe LEGO Stores and Pokémon GO event will take place from August 3, 2026 at 10 am to September 30, 2026 at 11 pm.",
+		"startDate": "2026-08-03T10:00:00-07:00",
+		"endDate": "2026-09-30T23:59:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/lego-pokemon-go-2026/",
+		"pokemonList": {
+			"Pikachu": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/lunala-in-5-star-raid-battles-august-2026/": {
+		"title": "Lunala in 5-star Raid Battles",
+		"description": "Lunala will be in five-star raid battles from August 19, 2026 to August 25, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Lunala from 6:00 pm to 7:00 pm local time on the following date:\n\n- August 19",
+		"startDate": "2026-08-19T06:00:00-07:00",
+		"endDate": "2026-08-25T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/lunala-in-5-star-raid-battles-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Lunala": {}
 		},
 		"megaList": {}
 	},
@@ -170,6 +336,125 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/max-mondays-2026-08-03/": {
+		"title": "Dynamax Magmar during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn August 3, 2026, the featured Dynamax Pokemon is Magmar.\n\n- Magmar",
+		"startDate": "2026-08-03T06:00:00-07:00",
+		"endDate": "2026-08-03T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-08-03/",
+		"pokemonList": {
+			"Magmar": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-08-10/": {
+		"title": "Dynamax Beldum during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn August 10, 2026, the featured Dynamax Pokemon is Beldum.\n\n- Beldum",
+		"startDate": "2026-08-10T06:00:00-07:00",
+		"endDate": "2026-08-10T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-08-10/",
+		"pokemonList": {
+			"Beldum": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-08-17/": {
+		"title": "Dynamax Magikarp during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn August 17, 2026, the featured Dynamax Pokemon is Magikarp.\n\n- Magikarp",
+		"startDate": "2026-08-17T06:00:00-07:00",
+		"endDate": "2026-08-17T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-08-17/",
+		"pokemonList": {
+			"Magikarp": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-08-24/": {
+		"title": "Dynamax Hitmontop during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn August 24, 2026, the featured Dynamax Pokemon is Hitmontop.\n\n- Hitmontop",
+		"startDate": "2026-08-24T06:00:00-07:00",
+		"endDate": "2026-08-24T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-08-24/",
+		"pokemonList": {
+			"Hitmontop": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-08-31/": {
+		"title": "Dynamax Eevee during Max Monday",
+		"description": "These Dynamax Pokemon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokemon.\n\nOn August 31, 2026, the featured Dynamax Pokemon is Eevee.\n\n- Eevee",
+		"startDate": "2026-08-31T06:00:00-07:00",
+		"endDate": "2026-08-31T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-08-31/",
+		"pokemonList": {
+			"Eevee": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-09-07/": {
+		"title": "Dynamax Ralts during Max Monday",
+		"description": "These Dynamax Pokémon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokémon.\n\nOn September 7, 2026, the featured Dynamax Pokémon is Ralts.\n\n- Ralts",
+		"startDate": "2026-09-07T06:00:00-07:00",
+		"endDate": "2026-09-07T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-09-07/",
+		"pokemonList": {
+			"Ralts": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-09-14/": {
+		"title": "Dynamax Rhyhorn during Max Monday",
+		"description": "These Dynamax Pokémon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokémon.\n\nOn September 14, 2026, the featured Dynamax Pokémon is Rhyhorn.\n\n- Rhyhorn",
+		"startDate": "2026-09-14T06:00:00-07:00",
+		"endDate": "2026-09-14T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-09-14/",
+		"pokemonList": {
+			"Rhyhorn": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-09-21/": {
+		"title": "Dynamax Articuno, Zapdos, and Moltres during Max Monday",
+		"description": "These Dynamax Pokémon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokémon.\n\nOn September 21, 2026, the featured Dynamax Pokémon are Articuno, Zapdos, and Moltres.\n\n- Articuno\n\n- Zapdos\n\n- Moltres",
+		"startDate": "2026-09-21T06:00:00-07:00",
+		"endDate": "2026-09-21T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-09-21/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Articuno": {},
+			"Moltres": {},
+			"Zapdos": {}
+		},
+		"megaList": {}
+	},
+	"/events/max-mondays-2026-09-28/": {
+		"title": "Dynamax Sobble during Max Monday",
+		"description": "These Dynamax Pokémon may appear in Max Battles throughout this season. Max Battles will be available from 6:00 a.m. to 9:00 p.m. local time on Mondays.\n\n- Power Spots will refresh more frequently.\n\n- Additional Power Spots will be active on Mondays compared to the rest of the week.\n\n- Max Battles will rotate to feature different Dynamax Pokémon.\n\nOn September 28, 2026, the featured Dynamax Pokémon is Sobble.\n\n- Sobble",
+		"startDate": "2026-09-28T06:00:00-07:00",
+		"endDate": "2026-09-28T21:00:00-07:00",
+		"eventType": 6,
+		"link": "https://leekduck.com/events/max-mondays-2026-09-28/",
+		"pokemonList": {
+			"Sobble": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
 	"/events/mega-aggron-in-mega-raids-july-2026/": {
 		"title": "Mega Aggron in Mega Raids",
 		"description": "Mega Aggron will be in Mega Raids from July 29, 2026 at 6 am to August 4, 2026 at 10 pm local time.",
@@ -183,6 +468,114 @@
 		"legendaryList": {},
 		"megaList": {
 			"Mega Aggron": {}
+		}
+	},
+	"/events/mega-ascension/": {
+		"title": "Mega Ascension",
+		"description": "Signs of an extraordinary mega-powered week are beginning to appear. Join Mega Ascension to prepare for Pokémon GO Fest 2026: Mega Finale with Mega Raids, Kalos first partner Pokémon, and GO Pass: Mega Finale!\n\nThe Mega Ascension event will take place from August 31, 2026 at 10 am to September 4, 2026 at 11 pm local time.",
+		"startDate": "2026-08-31T10:00:00-07:00",
+		"endDate": "2026-09-04T23:59:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/mega-ascension/",
+		"pokemonList": {
+			"Bellsprout": {},
+			"Chespin": {},
+			"Dratini": {},
+			"Falinks": {},
+			"Fennekin": {},
+			"Froakie": {},
+			"Inkay": {},
+			"Pikachu": {},
+			"Skarmory": {},
+			"Staryu": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Dragonite": {},
+			"Mega Falinks": {},
+			"Mega Latias": {},
+			"Mega Latios": {},
+			"Mega Malamar": {},
+			"Mega Raichu X": {},
+			"Mega Raichu Y": {},
+			"Mega Skarmory": {},
+			"Mega Starmie": {},
+			"Mega Victreebel": {}
+		}
+	},
+	"/events/mega-beedrill-in-mega-raids-september-2026/": {
+		"title": "Mega Beedrill in Mega Raids",
+		"description": "Mega Beedrill will be in Mega Raids from September 8, 2026 at 6 am to September 15, 2026 at 10 pm local time.",
+		"startDate": "2026-09-08T06:00:00-07:00",
+		"endDate": "2026-09-15T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026/",
+		"pokemonList": {
+			"Beedrill": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Beedrill": {}
+		}
+	},
+	"/events/mega-blaziken-in-mega-raids-august-2026/": {
+		"title": "Mega Blaziken in Mega Raids",
+		"description": "Mega Blaziken will be in Mega Raids from August 5, 2026 at 6 am to August 11, 2026 at 10 pm local time.",
+		"startDate": "2026-08-05T06:00:00-07:00",
+		"endDate": "2026-08-11T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-blaziken-in-mega-raids-august-2026/",
+		"pokemonList": {
+			"Blaziken": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Blaziken": {}
+		}
+	},
+	"/events/mega-garchomp-in-mega-raids-august-2026/": {
+		"title": "Mega Garchomp in Mega Raids",
+		"description": "Mega Garchomp will be in Mega Raids from August 12, 2026 at 6 am to August 18, 2026 at 10 pm local time.",
+		"startDate": "2026-08-12T06:00:00-07:00",
+		"endDate": "2026-08-18T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-garchomp-in-mega-raids-august-2026/",
+		"pokemonList": {
+			"Garchomp": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Garchomp": {}
+		}
+	},
+	"/events/mega-gyarados-in-mega-raids-august-2026/": {
+		"title": "Mega Gyarados in Mega Raids",
+		"description": "Mega Gyarados will be in Mega Raids from August 26, 2026 at 6 am to September 8, 2026 at 10 pm local time.",
+		"startDate": "2026-08-26T06:00:00-07:00",
+		"endDate": "2026-09-08T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-gyarados-in-mega-raids-august-2026/",
+		"pokemonList": {
+			"Gyarados": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Gyarados": {}
+		}
+	},
+	"/events/mega-houndoom-in-mega-raids-september-2026/": {
+		"title": "Mega Houndoom in Mega Raids",
+		"description": "Mega Houndoom will be in Mega Raids from September 11, 2026 at 6 am to September 15, 2026 at 10 pm local time.",
+		"startDate": "2026-09-11T06:00:00-07:00",
+		"endDate": "2026-09-15T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026/",
+		"pokemonList": {
+			"Houndoom": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Houndoom": {}
 		}
 	},
 	"/events/mega-lucario-in-mega-raids-july-13-2026/": {
@@ -215,6 +608,21 @@
 			"Mega Lucario": {}
 		}
 	},
+	"/events/mega-malamar-in-mega-raids-september-2026/": {
+		"title": "Mega Malamar in Mega Raids",
+		"description": "Mega Malamar will be in Mega Raids from September 23, 2026 at 6 am to September 29, 2026 at 10 pm local time.",
+		"startDate": "2026-09-23T06:00:00-07:00",
+		"endDate": "2026-09-29T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/",
+		"pokemonList": {
+			"Malamar": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Malamar": {}
+		}
+	},
 	"/events/mega-salamence-in-mega-raids-july-2026/": {
 		"title": "Mega Salamence in Mega Raids",
 		"description": "Mega Salamence will be in Mega Raids from July 22, 2026 at 6 am to July 28, 2026 at 10 pm local time.",
@@ -245,6 +653,97 @@
 			"Mega Sceptile": {}
 		}
 	},
+	"/events/mega-squads-2026/": {
+		"title": "Mega Squads",
+		"description": "The Mega Squads event will take place from September 8, 2026 at 10 am to September 14, 2026 at 8 pm. Stay tuned for more details.",
+		"startDate": "2026-09-08T10:00:00-07:00",
+		"endDate": "2026-09-14T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/mega-squads-2026/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/mega-squads/": {
+		"title": "Mega Squads",
+		"description": "Pick up where Mega Finale leaves off, and get energized for the Mega Squads event!\n\nThe Mega Squads event will take place from September 8, 2026 at 10 am to September 14, 2026 at 8 pm local time.",
+		"startDate": "2026-09-08T10:00:00-07:00",
+		"endDate": "2026-09-14T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/mega-squads/",
+		"pokemonList": {
+			"Beedrill": {},
+			"Carvanha": {},
+			"Emolga ": {},
+			"Flamigo": {},
+			"Flamigo ": {},
+			"Fletchling": {},
+			"Fletchling ": {},
+			"Houndoom": {},
+			"Houndour": {},
+			"Kakuna": {},
+			"Mabosstiff": {},
+			"Maschiff": {},
+			"Maschiff ": {},
+			"Nickit": {},
+			"Pancham ": {},
+			"Pidgey": {},
+			"Rookidee": {},
+			"Rookidee ": {},
+			"Sandile ": {},
+			"Weedle": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Beedrill": {},
+			"Mega Houndoom": {}
+		}
+	},
+	"/events/mega-swampert-in-mega-raids-august-2026/": {
+		"title": "Mega Swampert in Mega Raids",
+		"description": "Mega Swampert will be in Mega Raids from August 19, 2026 at 6 am to August 25, 2026 at 10 pm local time.",
+		"startDate": "2026-08-19T06:00:00-07:00",
+		"endDate": "2026-08-25T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-swampert-in-mega-raids-august-2026/",
+		"pokemonList": {
+			"Swampert": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Swampert": {}
+		}
+	},
+	"/events/mega-venusaur-in-mega-raids-september-2026/": {
+		"title": "Mega Venusaur in Mega Raids",
+		"description": "Mega Venusaur will be in Mega Raids from September 16, 2026 at 6 am to September 22, 2026 at 10 pm local time.",
+		"startDate": "2026-09-16T06:00:00-07:00",
+		"endDate": "2026-09-22T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-venusaur-in-mega-raids-september-2026/",
+		"pokemonList": {
+			"Venusaur": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Venusaur": {}
+		}
+	},
+	"/events/mega-victreebel-in-mega-raids-september-2026/": {
+		"title": "Mega Victreebel in Mega Raids",
+		"description": "Mega Victreebel will be in Mega Raids from September 30, 2026 at 6 am to October 6, 2026 at 10 pm local time.",
+		"startDate": "2026-09-30T06:00:00-07:00",
+		"endDate": "2026-10-06T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+		"pokemonList": {
+			"Victreebel": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Victreebel": {}
+		}
+	},
 	"/events/ozone-ascent-2026/": {
 		"title": "Ozone Ascent",
 		"description": "Complete Timed Research to encounter Rayquaza and more!\n\nThe Ozone Ascent event will take place from July 25, 2026 at 10 am to July 26, 2026 at 8 pm.",
@@ -256,6 +755,29 @@
 		"legendaryList": {
 			"Rayquaza": {}
 		},
+		"megaList": {}
+	},
+	"/events/patterns-of-the-wild-2026/": {
+		"title": "Patterns of the Wild",
+		"description": "This event is available only in Indonesia.\n\nNote: The original announcement was updated to say this event is exclusive to Indonesia. It originally gave no indication that it was not a global event.\n\nPatterns of the Wild brings a Special Background for Pikachu wearing a batik shirt, along with boosted wild encounters, Incense bonuses, and research rewards!\n\nThe event takes place on Friday, October 2, 2026, from 10:00 a.m. to 8:00 p.m. local time. Timed Research is available for a longer period, from September 28 through October 7.",
+		"startDate": "2026-10-02T10:00:00-07:00",
+		"endDate": "2026-10-02T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/patterns-of-the-wild-2026/",
+		"pokemonList": {
+			"Batik Shirt Pikachu": {},
+			"Bellsprout": {},
+			"Caterpie": {},
+			"Gloom": {},
+			"Hoppip": {},
+			"Ledian": {},
+			"Ledyba": {},
+			"Oddish": {},
+			"Skiploom": {},
+			"Sunkern": {},
+			"Wurmple": {}
+		},
+		"legendaryList": {},
 		"megaList": {}
 	},
 	"/events/pokemon-go-fest-2026-global-sunday-raid-makeup/": {
@@ -442,6 +964,178 @@
 			"Mega Tyranitar": {}
 		}
 	},
+	"/events/pokemon-go-fest-2026-mega-finale/": {
+		"title": "Pokémon GO Fest 2026: Mega Finale",
+		"description": "Rally with Trainers around the world for the mega conclusion of Pokémon GO Fest 2026! Pokémon GO Fest 2026: Mega Finale brings rotating habitats, powerful Mega Raids, and Super Mega Raids featuring Mega Mewtwo X and Mega Mewtwo Y.\n\nPrepare during the lead-up event Mega Ascension, then join this unticketed worldwide weekend finale.\n\nThe Pokémon GO Fest 2026: Mega Finale event will take place from September 5, 2026 at 10 am to September 6, 2026 at 6 pm local time.",
+		"startDate": "2026-09-05T10:00:00-07:00",
+		"endDate": "2026-09-06T18:00:00-07:00",
+		"eventType": 8,
+		"link": "https://leekduck.com/events/pokemon-go-fest-2026-mega-finale/",
+		"pokemonList": {
+			"Abra": {},
+			"Aerodactyl": {},
+			"Amaura": {},
+			"Aron": {},
+			"Audino": {},
+			"Bagon": {},
+			"Beldum": {},
+			"Bellsprout": {},
+			"Bergmite": {},
+			"Binacle": {},
+			"Buneary": {},
+			"Carbink": {},
+			"Carvanha": {},
+			"Chespin": {},
+			"Clauncher": {},
+			"Clefairy": {},
+			"Dedenne": {},
+			"Dratini": {},
+			"Drilbur": {},
+			"Electrike": {},
+			"Emolga": {},
+			"Espurr": {},
+			"Falinks": {},
+			"Fennekin": {},
+			"Fletchling": {},
+			"Froakie": {},
+			"Furfrou (Natural)": {},
+			"Gastly": {},
+			"Helioptile": {},
+			"Houndour": {},
+			"Inkay": {},
+			"Litwick": {},
+			"Machop": {},
+			"Magikarp": {},
+			"Mareep": {},
+			"Mawile": {},
+			"Meditite": {},
+			"Noibat": {},
+			"Numel": {},
+			"Onix": {},
+			"Pancham": {},
+			"Phantump": {},
+			"Pikachu": {},
+			"Pinsir": {},
+			"Pumpkaboo (Medium)": {},
+			"Ralts": {},
+			"Roselia": {},
+			"Sableye": {},
+			"Sandile": {},
+			"Scraggy": {},
+			"Scyther": {},
+			"Shuppet": {},
+			"Skarmory": {},
+			"Skiddo": {},
+			"Slowpoke": {},
+			"Snorunt": {},
+			"Snover": {},
+			"Spritzee": {},
+			"Staryu": {},
+			"Stunfisk": {},
+			"Swablu": {},
+			"Tynamo": {},
+			"Tyrunt": {},
+			"Venipede": {},
+			"Weedle": {},
+			"Zorua": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Abomasnow": {},
+			"Mega Aerodactyl": {},
+			"Mega Aggron": {},
+			"Mega Alakazam": {},
+			"Mega Altaria": {},
+			"Mega Ampharos": {},
+			"Mega Audino": {},
+			"Mega Banette": {},
+			"Mega Beedrill": {},
+			"Mega Camerupt": {},
+			"Mega Chesnaught": {},
+			"Mega Delphox": {},
+			"Mega Dragonite": {},
+			"Mega Falinks": {},
+			"Mega Gengar": {},
+			"Mega Glalie": {},
+			"Mega Greninja": {},
+			"Mega Gyarados": {},
+			"Mega Houndoom": {},
+			"Mega Lopunny": {},
+			"Mega Malamar": {},
+			"Mega Manectric": {},
+			"Mega Mawile": {},
+			"Mega Medicham": {},
+			"Mega Mewtwo X": {},
+			"Mega Mewtwo Y": {},
+			"Mega Pinsir": {},
+			"Mega Raichu X": {},
+			"Mega Raichu Y": {},
+			"Mega Sableye": {},
+			"Mega Sharpedo": {},
+			"Mega Skarmory": {},
+			"Mega Slowbro": {},
+			"Mega Starmie": {},
+			"Mega Steelix": {},
+			"Mega Victreebel": {}
+		}
+	},
+	"/events/pokemon-horizons-the-series-celebration-event-2026/": {
+		"title": "Pokémon Horizons: The Series Celebration Event",
+		"description": "The Pokémon Horizons: The Series Celebration Event returns to Pokémon GO with the debut of Charmander wearing Friede’s goggles and its Evolutions!\n\nUS fans can watch Pokémon Horizons: Season 3—Rising Hope on Netflix now. For more information, visit the Pokémon Horizons website.\n\nUK fans can watch Pokémon Horizons: Season 3—Rising Hope on BBC iPlayer. For more information, visit the Pokémon animation website.\n\nFor fans in other regions, please check availability with your local providers.",
+		"startDate": "2026-09-16T10:00:00-07:00",
+		"endDate": "2026-09-22T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/pokemon-horizons-the-series-celebration-event-2026/",
+		"pokemonList": {
+			"Captain's Cap Pikachu": {},
+			"Chansey": {},
+			"Charizard wearing Friede's goggles": {},
+			"Charmander wearing Friede's goggles": {},
+			"Charmeleon wearing Friede's goggles": {},
+			"Eevee": {},
+			"Fidough": {},
+			"Hatenna": {},
+			"Meowscarada": {},
+			"Quaquaval": {},
+			"Rockruff": {},
+			"Skeledirge": {},
+			"Wattrel": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/pokemon-world-championships-2026-san-francisco/": {
+		"title": "[San Francisco] 2026 Pokémon World Championships",
+		"description": "Special in-person Pokémon GO activities are available around San Francisco during the 2026 Pokémon World Championships. Explore the city for a Stamp Rally, location-themed raids with guaranteed Location Backgrounds, and exclusive research.\n\nThe event runs from Friday, August 28, at 10:00 a.m. to Sunday, August 30, 2026, at 8:00 p.m. PDT.",
+		"startDate": "2026-08-28T10:00:00-07:00",
+		"endDate": "2026-08-30T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/pokemon-world-championships-2026-san-francisco/",
+		"pokemonList": {
+			"Alolan Exeggutor": {},
+			"Dewgong": {},
+			"Duraludon": {},
+			"Fuecoco": {},
+			"Kingler": {},
+			"Pikachu wearing a Cosmog-themed spacesuit": {},
+			"Zigzagoon": {}
+		},
+		"legendaryList": {
+			"Rayquaza": {}
+		},
+		"megaList": {}
+	},
+	"/events/pokemon-xp-2026-worlds/": {
+		"title": "Pokémon XP \u0026 2026 Worlds",
+		"description": "The Pokémon XP \u0026 2026 Worlds event will take place from August 25, 2026 at 10 am to August 30, 2026 at 8 pm. Stay tuned for more details.",
+		"startDate": "2026-08-25T10:00:00-07:00",
+		"endDate": "2026-08-30T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/pokemon-xp-2026-worlds/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
 	"/events/raichu-super-mega-raid-day-2026/": {
 		"title": "Raichu Super Mega Raid Day",
 		"description": "Sparks fly for Raichu Super Mega Raid Day!",
@@ -489,6 +1183,120 @@
 		"link": "https://leekduck.com/events/raidhour20260729/",
 		"pokemonList": {},
 		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260805/": {
+		"title": "Uxie, Mesprit, and Azelf Raid Hour",
+		"description": "A Raid Hour featuring Uxie, Mesprit, and Azelf is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.\n\nEach Lake Guardian appears in one region. They are as follows:\n\n- Uxie: Asia-Pacific Region\n\n- Mesprit: Europe, the Middle East, Africa, and India\n\n- Azelf: Americas and Greenland",
+		"startDate": "2026-08-05T18:00:00-07:00",
+		"endDate": "2026-08-05T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260805/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260812/": {
+		"title": "Groudon Raid Hour",
+		"description": "A Raid Hour featuring Groudon is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-08-12T18:00:00-07:00",
+		"endDate": "2026-08-12T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260812/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260819/": {
+		"title": "Lunala Raid Hour",
+		"description": "A Raid Hour featuring Lunala is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-08-19T18:00:00-07:00",
+		"endDate": "2026-08-19T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260819/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260826/": {
+		"title": "Regirock, Regice, and Registeel Raid Hour",
+		"description": "A Raid Hour featuring Regirock, Regice, and Registeel is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-08-26T18:00:00-07:00",
+		"endDate": "2026-08-26T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260826/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260902/": {
+		"title": "Regirock, Regice, and Registeel Raid Hour",
+		"description": "A Raid Hour featuring Regirock, Regice, and Registeel is scheduled from 6 to 7 pm Local Time. During this hour there will be an increased number of 5-star Raids.",
+		"startDate": "2026-09-02T18:00:00-07:00",
+		"endDate": "2026-09-02T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260902/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260909/": {
+		"title": "Zacian (Hero of Many Battles) Raid Hour",
+		"description": "A Raid Hour featuring Zacian (Hero of Many Battles) is scheduled from 6:00 p.m. to 7:00 p.m. local time. During this hour there will be an increased number of five-star raids.",
+		"startDate": "2026-09-09T18:00:00-07:00",
+		"endDate": "2026-09-09T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260909/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260916/": {
+		"title": "Zamazenta (Hero of Many Battles) Raid Hour",
+		"description": "A Raid Hour featuring Zamazenta (Hero of Many Battles) is scheduled from 6:00 p.m. to 7:00 p.m. local time. During this hour there will be an increased number of five-star raids.",
+		"startDate": "2026-09-16T18:00:00-07:00",
+		"endDate": "2026-09-16T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260916/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260923/": {
+		"title": "Xurkitree, Pheromosa, and Buzzwole Raid Hour",
+		"description": "A Raid Hour featuring Xurkitree (Asia-Pacific), Pheromosa (Europe, the Middle East, Africa, and India), and Buzzwole (the Americas and Greenland) is scheduled from 6:00 p.m. to 7:00 p.m. local time. During this hour there will be an increased number of five-star raids.",
+		"startDate": "2026-09-23T18:00:00-07:00",
+		"endDate": "2026-09-23T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260923/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/raidhour20260930/": {
+		"title": "Xerneas Raid Hour",
+		"description": "A Raid Hour featuring Xerneas is scheduled from 6:00 p.m. to 7:00 p.m. local time. During this hour there will be an increased number of five-star raids.",
+		"startDate": "2026-09-30T18:00:00-07:00",
+		"endDate": "2026-09-30T19:00:00-07:00",
+		"eventType": 4,
+		"link": "https://leekduck.com/events/raidhour20260930/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/regirock-regice-registeel-in-5-star-raid-battles-august-2026/": {
+		"title": "Regirock, Regice, and Registeel in 5-star Raid Battles",
+		"description": "Regirock, Regice, and Registeel will be in five-star raid battles from August 26, 2026 to September 8, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Regirock, Regice, and Registeel from 6:00 pm to 7:00 pm local time on the following dates:\n\n- August 26\n\n- September 2",
+		"startDate": "2026-08-26T06:00:00-07:00",
+		"endDate": "2026-09-08T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/regirock-regice-registeel-in-5-star-raid-battles-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Regice": {},
+			"Regirock": {},
+			"Registeel": {}
+		},
 		"megaList": {}
 	},
 	"/events/road-of-legends-2026/": {
@@ -618,6 +1426,30 @@
 			"Mega Tyranitar": {}
 		}
 	},
+	"/events/september-communitydayclassic2026/": {
+		"title": "September Community Day Classic",
+		"description": "The September Community Day Classic event will take place on September 12, 2026 from 2 pm to 5 pm. Stay tuned for more details.",
+		"startDate": "2026-09-12T14:00:00-07:00",
+		"endDate": "2026-09-12T17:00:00-07:00",
+		"eventType": 5,
+		"link": "https://leekduck.com/events/september-communitydayclassic2026/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/shadow-giratina-altered-in-shadow-raids-august-2026/": {
+		"title": "Shadow Giratina (Altered Forme) in Shadow Raids",
+		"description": "Shadow Giratina (Altered Forme) will make its Shadow Raid debut in Pokémon GO! If you’re lucky you’ll be able to encounter Shiny Shadow Giratina (Altered Forme)!\n\nShadow Giratina (Altered Forme) will appear in five-star Shadow Raids every weekend from August 5 to September 8.",
+		"startDate": "2026-08-05T06:00:00-07:00",
+		"endDate": "2026-09-08T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/shadow-giratina-altered-in-shadow-raids-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Giratina (Altered)": {}
+		},
+		"megaList": {}
+	},
 	"/events/shadow-palkia-in-shadow-raids-july-2026/": {
 		"title": "Shadow Palkia in Shadow Raids",
 		"description": "Shadow Palkia will appear in Pokemon GO in Shadow Raids. If you’re lucky you’ll be able to encounter Shiny Shadow Palkia!\n\nShadow Palkia will appear in five-star Shadow Raids every weekend from July 1 to August 4.",
@@ -628,6 +1460,19 @@
 		"pokemonList": {},
 		"legendaryList": {
 			"Palkia": {}
+		},
+		"megaList": {}
+	},
+	"/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/": {
+		"title": "Shadow Thundurus (Incarnate Forme) in Shadow Raids",
+		"description": "Shadow Thundurus (Incarnate Forme) will appear in five-star Shadow Raids every weekend from September 9, 2026 to October 6, 2026. If you’re lucky, you may encounter Shiny Shadow Thundurus (Incarnate Forme)!",
+		"startDate": "2026-09-09T06:00:00-07:00",
+		"endDate": "2026-10-06T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Thundurus (Incarnate)": {}
 		},
 		"megaList": {}
 	},
@@ -668,6 +1513,34 @@
 		"legendaryList": {},
 		"megaList": {}
 	},
+	"/events/staraptor-super-mega-raid-day-2026/": {
+		"title": "Staraptor Super Mega Raid Day",
+		"description": "Ready yourself to courageously challenge Staraptor Super Mega Raid Day!",
+		"startDate": "2026-09-19T14:00:00-07:00",
+		"endDate": "2026-09-19T17:00:00-07:00",
+		"eventType": 3,
+		"link": "https://leekduck.com/events/staraptor-super-mega-raid-day-2026/",
+		"pokemonList": {
+			"Staraptor": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/starmie-super-mega-raid-day-2026/": {
+		"title": "Starmie Super Mega Raid Day",
+		"description": "Mega Starmie stars in Ultra Unlock: Starmie Super Mega Raid Day!",
+		"startDate": "2026-08-22T11:00:00-07:00",
+		"endDate": "2026-08-22T17:00:00-07:00",
+		"eventType": 3,
+		"link": "https://leekduck.com/events/starmie-super-mega-raid-day-2026/",
+		"pokemonList": {
+			"Starmie": {}
+		},
+		"legendaryList": {},
+		"megaList": {
+			"Mega Starmie": {}
+		}
+	},
 	"/events/summer-marathon-2026/": {
 		"title": "Summer Marathon: Arctic Embers",
 		"description": "Fire up or chill out during Summer Marathon: Arctic Embers!\n\nThe Summer Marathon: Arctic Embers event will take place from August 4, 2026 at 10 am to August 10, 2026 at 8 pm.",
@@ -692,6 +1565,17 @@
 			"Vanillite": {},
 			"Vulpix": {}
 		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/super-mega-raid-day-september-2026/": {
+		"title": "Super Mega Raid Day",
+		"description": "The Super Mega Raid Day event will take place on September 19, 2026 from 2 pm to 5 pm. Stay tuned for more details.",
+		"startDate": "2026-09-19T14:00:00-07:00",
+		"endDate": "2026-09-19T17:00:00-07:00",
+		"eventType": 3,
+		"link": "https://leekduck.com/events/super-mega-raid-day-september-2026/",
+		"pokemonList": {},
 		"legendaryList": {},
 		"megaList": {}
 	},
@@ -769,5 +1653,118 @@
 		"megaList": {
 			"Meganium": {}
 		}
+	},
+	"/events/unannounced-september-event-season-24/": {
+		"title": "Unannounced Event",
+		"description": "This unannounced event will take place from September 16, 2026 at 10 am to September 22, 2026 at 8 pm. Stay tuned for more details.",
+		"startDate": "2026-09-16T10:00:00-07:00",
+		"endDate": "2026-09-22T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/unannounced-september-event-season-24/",
+		"pokemonList": {},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/uxie-mesprit-azelf-in-5-star-raid-battles-august-2026/": {
+		"title": "Uxie, Mesprit, and Azelf in 5-star Raid Battles",
+		"description": "Uxie, Mesprit, and Azelf will be in five-star raid battles from August 5, 2026 to August 11, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Uxie, Mesprit, and Azelf from 6:00 pm to 7:00 pm local time on the following date:\n\n- August 5\n\nAs a reminder, these are the regions that Uxie, Mesprit, and Azelf are available in:\n\nUxie is available in the Asia-Pacific region.Mesprit is available in Europe, the Middle East, Africa, and India.Azelf is available in the Americas and Greenland.",
+		"startDate": "2026-08-05T06:00:00-07:00",
+		"endDate": "2026-08-11T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/uxie-mesprit-azelf-in-5-star-raid-battles-august-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Azelf": {},
+			"Mesprit": {},
+			"Uxie": {}
+		},
+		"megaList": {}
+	},
+	"/events/water-festival-2026/": {
+		"title": "Ultra Unlock: Water Festival",
+		"description": "Arrokuda and Cramorant splash into Pokémon GO during Ultra Unlock: Water Festival!\n\nThe Ultra Unlock: Water Festival event will take place from August 18, 2026 at 10 am to August 24, 2026 at 8 pm local time.",
+		"startDate": "2026-08-18T10:00:00-07:00",
+		"endDate": "2026-08-24T20:00:00-07:00",
+		"eventType": 1,
+		"link": "https://leekduck.com/events/water-festival-2026/",
+		"pokemonList": {
+			"Araquanid": {},
+			"Arrokuda": {},
+			"Barraskewda": {},
+			"Clamperl": {},
+			"Cramorant": {},
+			"Dewpider": {},
+			"Dondozo": {},
+			"Ducklett": {},
+			"Feebas": {},
+			"Goldeen": {},
+			"Hisuian Samurott": {},
+			"Mareanie": {},
+			"Psyduck": {},
+			"Psyduck (Swim Ring)": {},
+			"Scarf Lapras": {},
+			"Swanna": {},
+			"Tatsugiri (Curly)": {},
+			"Tatsugiri (Droopy)": {},
+			"Tatsugiri (Stretchy)": {},
+			"Wiglett": {},
+			"Wimpod": {}
+		},
+		"legendaryList": {},
+		"megaList": {}
+	},
+	"/events/xerneas-in-5-star-raid-battles-september-2026/": {
+		"title": "Xerneas in 5-star Raid Battles",
+		"description": "Xerneas will be in five-star raid battles from September 30, 2026 to October 6, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Xerneas from 6:00 p.m. to 7:00 p.m. local time on September 30.",
+		"startDate": "2026-09-30T06:00:00-07:00",
+		"endDate": "2026-10-06T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Xerneas": {}
+		},
+		"megaList": {}
+	},
+	"/events/xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/": {
+		"title": "Xurkitree, Pheromosa, and Buzzwole in 5-star Raid Battles",
+		"description": "Xurkitree, Pheromosa, and Buzzwole will be in five-star raid battles from September 23, 2026 to September 29, 2026.\n\nXurkitree will appear in the Asia-Pacific region, Pheromosa will appear in Europe, the Middle East, Africa, and India, and Buzzwole will appear in the Americas and Greenland.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring these regional raid bosses from 6:00 p.m. to 7:00 p.m. local time on September 23.",
+		"startDate": "2026-09-23T06:00:00-07:00",
+		"endDate": "2026-09-29T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Buzzwole": {},
+			"Pheromosa": {},
+			"Xurkitree": {}
+		},
+		"megaList": {}
+	},
+	"/events/zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026/": {
+		"title": "Zacian (Hero of Many Battles) in 5-star Raid Battles",
+		"description": "Zacian (Hero of Many Battles) will be in five-star raid battles from September 9, 2026 to September 15, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Zacian (Hero of Many Battles) from 6:00 p.m. to 7:00 p.m. local time on September 9.",
+		"startDate": "2026-09-09T06:00:00-07:00",
+		"endDate": "2026-09-15T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Zacian (Hero of Many Battles)": {}
+		},
+		"megaList": {}
+	},
+	"/events/zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/": {
+		"title": "Zamazenta (Hero of Many Battles) in 5-star Raid Battles",
+		"description": "Zamazenta (Hero of Many Battles) will be in five-star raid battles from September 16, 2026 to September 22, 2026.\n\nRaid Hours\n\nThere will also be a Raid Hour featuring Zamazenta (Hero of Many Battles) from 6:00 p.m. to 7:00 p.m. local time on September 16.",
+		"startDate": "2026-09-16T06:00:00-07:00",
+		"endDate": "2026-09-22T22:00:00-07:00",
+		"eventType": 2,
+		"link": "https://leekduck.com/events/zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/",
+		"pokemonList": {},
+		"legendaryList": {
+			"Zamazenta (Hero of Many Battles)": {}
+		},
+		"megaList": {}
 	}
 }
